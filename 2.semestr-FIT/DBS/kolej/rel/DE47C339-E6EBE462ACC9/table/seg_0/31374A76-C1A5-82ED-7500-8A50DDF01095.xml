@@ -1,0 +1,162 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="31374A76-C1A5-82ED-7500-8A50DDF01095" name="Person">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:09 UTC</createdTime>
+<generatorID>7C6905FD-45BD-EFED-D4FF-98F82ADE1019</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="surname" id="351DC93D-D038-6897-1E02-33EE06870D48">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:09 UTC</createdTime>
+<generatorID>C1290A13-559E-1B3B-9319-8E85B5393533</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="age" id="132C6176-4698-9442-8E9A-D310440B9E49">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:09 UTC</createdTime>
+<generatorID>5CDCA00F-36FF-F663-B689-139950B390A1</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>18</beginValue>
+<endValue>150</endValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="firstname" id="ABC4B965-AAAD-D1F0-3755-9BE3D0B9AAA6">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:09 UTC</createdTime>
+<generatorID>6DA1B951-D89E-8136-39C6-530258892F36</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="gender" id="B21663BC-D4BE-411F-30F4-85312C9A1D73">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:09 UTC</createdTime>
+<generatorID>A3CDCBE9-EFD7-171D-4245-2DDB2455E9F0</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>6 CHAR</dataTypeSize>
+<listOfValues>
+<valueDef value="Female" description=""/>
+<valueDef value="Male" description=""/>
+</listOfValues>
+<ownDataTypeParameters>6 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="person_id" id="7505AD36-3A7E-CD1C-9FD8-1724F3EF443B">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:09 UTC</createdTime>
+<generatorID>FCD1E726-BF0D-C8F6-5C3F-054C0ABCE6EA</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="bedding_ean" id="22EF2384-1697-67A7-F596-19A23A577129">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:09 UTC</createdTime>
+<generatorID>54A07BD2-5958-BA2D-CE82-D2171E306DB6</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="665A4CF2-3D08-F0C4-0443-263F4D02D78F" referredColumn="C5AAF35D-2EC1-919D-075C-04F7BD89764D"/>
+</associations>
+</Column>
+<Column name="bike_id" id="238C0B4A-D08C-2161-2179-F41C488D811B">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:09 UTC</createdTime>
+<generatorID>EDF35D27-3949-B50D-C345-CC56730EF257</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="15A8AD82-CE25-9716-2415-2416956071EE" referredColumn="C3272C93-C4A9-B967-DE28-2EAE92EEE488"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D034E86F-EFF4-C016-5BA6-E35B7369143E" name="Person_PK">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:09 UTC</createdTime>
+<generatorID>C6938CF9-FE15-726A-18A7-EC753B2D66A6</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7505AD36-3A7E-CD1C-9FD8-1724F3EF443B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="19E5415A-3A10-F190-DFDC-465C7E737E35" name="Person__IDX">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:09 UTC</createdTime>
+<ownerDesignName>kolej</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>0B6AFA72-87B9-7C31-891D-BF683D7A61D0</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="22EF2384-1697-67A7-F596-19A23A577129"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="959F23EF-F926-15FF-47CE-90CAF837CD01" name="Person_Bedding_FK">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:09 UTC</createdTime>
+<generatorID>0B6AFA72-87B9-7C31-891D-BF683D7A61D0</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="22EF2384-1697-67A7-F596-19A23A577129"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="56304E6C-364F-41CF-B0AE-4F739155F2CD" name="Person_Bike_FK">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:09 UTC</createdTime>
+<generatorID>2069DDBD-7085-B0F6-B9F9-E8B58E2F4466</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="238C0B4A-D08C-2161-2179-F41C488D811B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

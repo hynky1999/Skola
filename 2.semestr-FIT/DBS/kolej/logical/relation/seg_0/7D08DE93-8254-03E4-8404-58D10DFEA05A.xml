@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Residence_book_room" directorySegmentName="seg_0" id="7D08DE93-8254-03E4-8404-58D10DFEA05A">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-02-25 23:47:28 UTC</createdTime>
+<ownerDesignName>kolej</ownerDesignName>
+<engineerTo>
+<item key="18C31362-2C44-3DCB-DA62-C53461422788" value="true"/>
+</engineerTo>
+<targetPk>83A1BBC8-53A9-B165-4D70-442543E4D921</targetPk>
+<identifying>false</identifying>
+<nameOnSource>books</nameOnSource>
+<nameOnTarget>is booked by</nameOnTarget>
+<optionalSource>false</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>73E6D93F-D0C0-CB49-94F1-1A5AF39AADBD</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>5A94F33D-F05B-8BF3-13E7-B841DA322C2F</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

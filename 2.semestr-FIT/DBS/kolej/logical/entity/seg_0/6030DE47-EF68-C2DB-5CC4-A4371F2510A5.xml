@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="6030DE47-EF68-C2DB-5CC4-A4371F2510A5" name="Bedding">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-02-26 09:38:41 UTC</createdTime>
+<ownerDesignName>kolej</ownerDesignName>
+<engineerTo>
+<item key="DE47C339-0971-6FB3-8698-E6EBE462ACC9" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="bedding_ean" id="AC71FCF2-861C-E85C-E116-DC01E5C71A0C">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-02-26 09:40:32 UTC</createdTime>
+<ownerDesignName>kolej</ownerDesignName>
+<engineerTo>
+<item key="DE47C339-0971-6FB3-8698-E6EBE462ACC9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="pattern" id="D16C469D-D9D6-AA7B-F605-0DFBD8F0D469">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-02-26 09:40:42 UTC</createdTime>
+<ownerDesignName>kolej</ownerDesignName>
+<engineerTo>
+<item key="DE47C339-0971-6FB3-8698-E6EBE462ACC9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 CHAR</dataTypeSize>
+<ownDataTypeParameters>25 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="washed" id="B2A79E62-B82B-8A27-D1A4-D7B6A45E7BA9">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-02-26 09:41:14 UTC</createdTime>
+<ownerDesignName>kolej</ownerDesignName>
+<engineerTo>
+<item key="DE47C339-0971-6FB3-8698-E6EBE462ACC9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1 CHAR</dataTypeSize>
+<ownDataTypeParameters>1 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="person_id" id="13417AA1-6FC8-6D35-0082-230DE7B9652D">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-02-26 13:48:58 UTC</createdTime>
+<generatorID>0B6AFA72-87B9-7C31-891D-BF683D7A61D0</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<engineerTo>
+<item key="DE47C339-0971-6FB3-8698-E6EBE462ACC9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>FCD1E726-BF0D-C8F6-5C3F-054C0ABCE6EA</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="56B54E09-5EA6-6BD8-8802-3BEE7F8342AA" name="bedding PK">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-02-26 09:46:09 UTC</createdTime>
+<ownerDesignName>kolej</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="DE47C339-0971-6FB3-8698-E6EBE462ACC9" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>AC71FCF2-861C-E85C-E116-DC01E5C71A0C</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

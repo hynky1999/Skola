@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EA90C4F7-5C23-BBC4-F541-CB37340D3BEB" name="Bedding">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:08 UTC</createdTime>
+<generatorID>6030DE47-EF68-C2DB-5CC4-A4371F2510A5</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="bedding_ean" id="C5AAF35D-2EC1-919D-075C-04F7BD89764D">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:08 UTC</createdTime>
+<generatorID>AC71FCF2-861C-E85C-E116-DC01E5C71A0C</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pattern" id="587A51DA-AE3D-DA85-27B6-5B1A9BAF55EF">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:08 UTC</createdTime>
+<generatorID>D16C469D-D9D6-AA7B-F605-0DFBD8F0D469</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 CHAR</dataTypeSize>
+<ownDataTypeParameters>25 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="washed" id="9553847C-18B9-ED33-135A-6E92E077C6C1">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:08 UTC</createdTime>
+<generatorID>B2A79E62-B82B-8A27-D1A4-D7B6A45E7BA9</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1 CHAR</dataTypeSize>
+<ownDataTypeParameters>1 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="person_id" id="7984F624-666B-5029-CF6D-BEFC248D81C4">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:08 UTC</createdTime>
+<generatorID>13417AA1-6FC8-6D35-0082-230DE7B9652D</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="598CFDCB-0733-0ACC-9CB8-EE313E48B858" referredColumn="7505AD36-3A7E-CD1C-9FD8-1724F3EF443B"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B2F43735-48E8-6F84-0A4C-F0B98C51E989" name="Bedding_PK">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:08 UTC</createdTime>
+<generatorID>56B54E09-5EA6-6BD8-8802-3BEE7F8342AA</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C5AAF35D-2EC1-919D-075C-04F7BD89764D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D23F7419-5353-C90C-147E-FF0ACF653FC2" name="Bedding__IDX">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:09 UTC</createdTime>
+<ownerDesignName>kolej</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>0B6AFA72-87B9-7C31-891D-BF683D7A61D0</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="7984F624-666B-5029-CF6D-BEFC248D81C4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="59D44C80-9921-F520-2023-6B1E74CD28BF" name="Bedding_Person_FK">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:09 UTC</createdTime>
+<generatorID>0B6AFA72-87B9-7C31-891D-BF683D7A61D0</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7984F624-666B-5029-CF6D-BEFC248D81C4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

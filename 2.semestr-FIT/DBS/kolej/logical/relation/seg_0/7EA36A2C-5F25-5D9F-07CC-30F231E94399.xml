@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Study_on" directorySegmentName="seg_0" id="7EA36A2C-5F25-5D9F-07CC-30F231E94399">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-02-25 23:36:03 UTC</createdTime>
+<ownerDesignName>kolej</ownerDesignName>
+<engineerTo>
+<item key="E10B828C-DB41-2865-E98B-59A1FDFB9327" value="true"/>
+</engineerTo>
+<targetPk>19E7D181-3672-7485-F0C6-A603D60A71C4</targetPk>
+<identifying>false</identifying>
+<nameOnSource>is studied on</nameOnSource>
+<nameOnTarget>has ongoing</nameOnTarget>
+<optionalSource>false</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>18E33C13-5FF6-D408-D73E-7D07741D97A3</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>4DA2886E-0B5A-BE42-A698-9E98E4D2C9FE</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

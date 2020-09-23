@@ -1,0 +1,46 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="2150DA2B-5763-8D70-1AD4-31B3E47A8767" name="Bike_storage">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-02-26 09:33:52 UTC</createdTime>
+<ownerDesignName>kolej</ownerDesignName>
+<engineerTo>
+<item key="DE47C339-0971-6FB3-8698-E6EBE462ACC9" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>2EAAC5DF-C86A-ACBD-6BA8-5F7FB06B916E</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="capacity" id="204E5D00-B1BF-DE91-22EB-5D574C4DE20E">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-02-26 09:34:22 UTC</createdTime>
+<ownerDesignName>kolej</ownerDesignName>
+<engineerTo>
+<item key="DE47C339-0971-6FB3-8698-E6EBE462ACC9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="person_id" id="8AC22306-14CE-835B-CD6C-10F07FCBFCBD">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-03-01 21:43:30 UTC</createdTime>
+<generatorID>5AF9EA6A-CF43-3A79-EC80-DCCA835DAB1B</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<engineerTo>
+<item key="DE47C339-0971-6FB3-8698-E6EBE462ACC9" value="true"/>
+</engineerTo>
+<referedAttribute>FCD1E726-BF0D-C8F6-5C3F-054C0ABCE6EA</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

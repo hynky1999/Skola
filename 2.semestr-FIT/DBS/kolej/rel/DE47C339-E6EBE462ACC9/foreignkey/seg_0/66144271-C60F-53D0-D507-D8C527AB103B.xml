@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="66144271-C60F-53D0-D507-D8C527AB103B" containerWithKeyObject="A212B77B-ABAB-E7FC-BB65-F4FADB681207" localFKIndex="9403174E-AE57-A5C7-1D35-B4CA6D284D30" name="Room_Floor_FK">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:09 UTC</createdTime>
+<generatorID>948C7FF4-AD16-8E5E-71E2-ECF865D581D5</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<referredTableLongName>Floor</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>D01DEB61-8672-A7D3-7CAA-C1B6153EC94D</referredTableID>
+<keyObject>BF6CA978-885C-DDDD-F675-321F48A7CA59</keyObject>
+<referredKeyID>BF6CA978-885C-DDDD-F675-321F48A7CA59</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>floor_number,mark</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

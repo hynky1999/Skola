@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Room_furnitures" directorySegmentName="seg_0" id="AB59BDE6-6AF2-074D-B186-7D2ABCA46A06">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-03-05 12:45:39 UTC</createdTime>
+<ownerDesignName>kolej</ownerDesignName>
+<engineerTo>
+<item key="18C31362-2C44-3DCB-DA62-C53461422788" value="true"/>
+</engineerTo>
+<targetPk>83A1BBC8-53A9-B165-4D70-442543E4D921</targetPk>
+<identifying>false</identifying>
+<nameOnSource>is in</nameOnSource>
+<nameOnTarget>has</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>F5E79B87-F19D-516A-F13D-D741FB42B746</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>2EAAC5DF-C86A-ACBD-6BA8-5F7FB06B916E</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

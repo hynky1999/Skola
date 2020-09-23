@@ -1,0 +1,126 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="18E33C13-5FF6-D408-D73E-7D07741D97A3" name="School_attendance">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-02-25 23:12:33 UTC</createdTime>
+<ownerDesignName>kolej</ownerDesignName>
+<engineerTo>
+<item key="DE47C339-0971-6FB3-8698-E6EBE462ACC9" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="degree" id="75A88014-FD1E-4ECF-97C8-1155899E9495">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-02-25 23:13:48 UTC</createdTime>
+<ownerDesignName>kolej</ownerDesignName>
+<engineerTo>
+<item key="DE47C339-0971-6FB3-8698-E6EBE462ACC9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 CHAR</dataTypeSize>
+<ownDataTypeParameters>25 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="grade_point_average" id="12C62CDF-96A4-D4FD-28BE-EFDADF02C58E">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-02-25 23:14:19 UTC</createdTime>
+<ownerDesignName>kolej</ownerDesignName>
+<engineerTo>
+<item key="DE47C339-0971-6FB3-8698-E6EBE462ACC9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="attendance_id" id="99479634-8054-8182-6D39-364933901336">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-02-25 23:35:46 UTC</createdTime>
+<ownerDesignName>kolej</ownerDesignName>
+<engineerTo>
+<item key="DE47C339-0971-6FB3-8698-E6EBE462ACC9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="person_id" id="E021F97B-0798-4946-817A-7CC074D6A87D">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-02-25 23:40:15 UTC</createdTime>
+<generatorID>A30A7B56-6119-346B-7626-AFB90AD8DBF1</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<engineerTo>
+<item key="DE47C339-0971-6FB3-8698-E6EBE462ACC9" value="true"/>
+</engineerTo>
+<referedAttribute>FCD1E726-BF0D-C8F6-5C3F-054C0ABCE6EA</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="school_id" id="9AB27416-3582-EEDB-1C80-EBA4F653B850">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-02-26 09:48:07 UTC</createdTime>
+<generatorID>7EA36A2C-5F25-5D9F-07CC-30F231E94399</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<engineerTo>
+<item key="DE47C339-0971-6FB3-8698-E6EBE462ACC9" value="true"/>
+</engineerTo>
+<referedAttribute>63606357-7B4D-9AE9-207F-5DF0064B6295</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="attendance_start" id="03E541B7-B60A-D76B-53B3-7402FA4321A2">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-03-05 12:14:03 UTC</createdTime>
+<ownerDesignName>kolej</ownerDesignName>
+<engineerTo>
+<item key="DE47C339-0971-6FB3-8698-E6EBE462ACC9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="attendance_end" id="47D8456F-2026-071D-A0A4-7818D9B8DBC9">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-03-05 12:14:14 UTC</createdTime>
+<ownerDesignName>kolej</ownerDesignName>
+<engineerTo>
+<item key="DE47C339-0971-6FB3-8698-E6EBE462ACC9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="D71A6948-CC26-B578-A992-35C43A839966" name="School_attendance PK">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-02-25 23:40:20 UTC</createdTime>
+<ownerDesignName>kolej</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="DE47C339-0971-6FB3-8698-E6EBE462ACC9" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>99479634-8054-8182-6D39-364933901336</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

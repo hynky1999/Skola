@@ -1,0 +1,133 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F5E79B87-F19D-516A-F13D-D741FB42B746" name="Furniture">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-02-25 23:08:10 UTC</createdTime>
+<ownerDesignName>kolej</ownerDesignName>
+<engineerTo>
+<item key="DE47C339-0971-6FB3-8698-E6EBE462ACC9" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="material" id="BBE0F447-1940-A75F-5A6F-234BCF5D121E">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-02-25 23:08:24 UTC</createdTime>
+<ownerDesignName>kolej</ownerDesignName>
+<engineerTo>
+<item key="DE47C339-0971-6FB3-8698-E6EBE462ACC9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 CHAR</dataTypeSize>
+<ownDataTypeParameters>25 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="condition" id="6FE7EA26-9C4C-B170-E001-E50C2FD17A11">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-02-25 23:08:40 UTC</createdTime>
+<ownerDesignName>kolej</ownerDesignName>
+<engineerTo>
+<item key="DE47C339-0971-6FB3-8698-E6EBE462ACC9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 CHAR</dataTypeSize>
+<ownDataTypeParameters>25 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="furniture_ean" id="8ACD8923-7D49-D4C4-AE7B-3336D95F7B16">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-02-25 23:47:03 UTC</createdTime>
+<ownerDesignName>kolej</ownerDesignName>
+<engineerTo>
+<item key="DE47C339-0971-6FB3-8698-E6EBE462ACC9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="type" id="C1C1BA71-857D-09B5-22D8-AD493FE1327E">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-02-26 09:33:31 UTC</createdTime>
+<ownerDesignName>kolej</ownerDesignName>
+<engineerTo>
+<item key="DE47C339-0971-6FB3-8698-E6EBE462ACC9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 CHAR</dataTypeSize>
+<ownDataTypeParameters>25 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="room_id" id="385B6858-6346-9F2B-3719-5F0332F0C4E1">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-03-05 13:14:09 UTC</createdTime>
+<generatorID>AB59BDE6-6AF2-074D-B186-7D2ABCA46A06</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<engineerTo>
+<item key="DE47C339-0971-6FB3-8698-E6EBE462ACC9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>CD3FC323-0F92-31F3-BEF7-60D859C6953E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="floor_number" id="0E8BF329-6BAF-1CD7-747A-322CE5D82816">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-03-05 13:15:23 UTC</createdTime>
+<generatorID>AB59BDE6-6AF2-074D-B186-7D2ABCA46A06</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<engineerTo>
+<item key="DE47C339-0971-6FB3-8698-E6EBE462ACC9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>402E3D38-7F49-7751-7ECA-9C75668EF125</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="mark" id="FC2AF22A-2859-3DE9-E11D-8A7B1A3FDBD5">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-12 17:23:38 UTC</createdTime>
+<generatorID>AB59BDE6-6AF2-074D-B186-7D2ABCA46A06</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<engineerTo>
+<item key="DE47C339-0971-6FB3-8698-E6EBE462ACC9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>DEA1FF1D-19B0-016C-35F4-9A77DC228EFE</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>3 BYTE</dataTypeSize>
+<ownDataTypeParameters>3 BYTE,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="4FC1222F-03FC-BCEC-72A4-AB74AADBCB43" name="Furniture PK">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-02-25 23:47:09 UTC</createdTime>
+<ownerDesignName>kolej</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="DE47C339-0971-6FB3-8698-E6EBE462ACC9" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>8ACD8923-7D49-D4C4-AE7B-3336D95F7B16</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

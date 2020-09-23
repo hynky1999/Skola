@@ -1,0 +1,138 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A284A8AD-EE25-09B2-CB3A-037DD20ED320" name="School_attendance">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:09 UTC</createdTime>
+<generatorID>18E33C13-5FF6-D408-D73E-7D07741D97A3</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="degree" id="950E432A-FDCB-65F0-B3EC-2491001EF7E8">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:09 UTC</createdTime>
+<generatorID>75A88014-FD1E-4ECF-97C8-1155899E9495</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 CHAR</dataTypeSize>
+<ownDataTypeParameters>25 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="grade_point_average" id="3A24EB08-35F6-0E39-FCD9-8F7F6A4E52DF">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:09 UTC</createdTime>
+<generatorID>12C62CDF-96A4-D4FD-28BE-EFDADF02C58E</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="attendance_id" id="B4A2BD8B-4ED0-97E2-040B-BDC7C01ED3DA">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:09 UTC</createdTime>
+<generatorID>99479634-8054-8182-6D39-364933901336</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="person_id" id="A4DDA02F-204D-B466-9862-1630BDB95265">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:09 UTC</createdTime>
+<generatorID>E021F97B-0798-4946-817A-7CC074D6A87D</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9AAA867A-5E7A-E626-E18C-A7614161F8C6" referredColumn="7505AD36-3A7E-CD1C-9FD8-1724F3EF443B"/>
+</associations>
+</Column>
+<Column name="school_id" id="50526D85-C1B9-B59F-E6D3-42AB82CC6659">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:09 UTC</createdTime>
+<generatorID>9AB27416-3582-EEDB-1C80-EBA4F653B850</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C5F586B0-25C6-6A36-FEFA-1F18DD85B590" referredColumn="17FCC746-0D5A-E323-ECFA-0E19B7907769"/>
+</associations>
+</Column>
+<Column name="attendance_start" id="EC197BE9-50CA-D858-4E97-8F75DFDE88BA">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:09 UTC</createdTime>
+<generatorID>03E541B7-B60A-D76B-53B3-7402FA4321A2</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="attendance_end" id="C9267130-A245-AF65-BE36-5561D34AEAED">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:09 UTC</createdTime>
+<generatorID>47D8456F-2026-071D-A0A4-7818D9B8DBC9</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EA119268-CE1A-5633-1915-FAE445D20B57" name="School_attendance_PK">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:09 UTC</createdTime>
+<generatorID>D71A6948-CC26-B578-A992-35C43A839966</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B4A2BD8B-4ED0-97E2-040B-BDC7C01ED3DA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F382F7B9-6079-8CDE-3AF7-D26774FF34C0" name="School_attendance_School_FK">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:09 UTC</createdTime>
+<generatorID>7EA36A2C-5F25-5D9F-07CC-30F231E94399</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="50526D85-C1B9-B59F-E6D3-42AB82CC6659"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2045D96F-3477-11C1-AC65-DB7855302E44" name="School_attendance_Person_FK">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:09 UTC</createdTime>
+<generatorID>A30A7B56-6119-346B-7626-AFB90AD8DBF1</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A4DDA02F-204D-B466-9862-1630BDB95265"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

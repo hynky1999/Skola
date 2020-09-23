@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="02591A5E-E72D-62AC-29FA-956BB96D381C" containerWithKeyObject="F6805598-2F66-F269-BFF9-F1D353E32C8E" localFKIndex="7FC29336-7855-CC9E-4B40-9C25EBD15A32" name="Residence_Room_Room_FK">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:09 UTC</createdTime>
+<generatorID>F042150E-364F-48A1-85E4-361BCC8CA57C</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<referredTableLongName>Room</referredTableLongName>
+<arc>36A18410-4EA4-8D96-BA9F-222C270E545A</arc>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>A212B77B-ABAB-E7FC-BB65-F4FADB681207</referredTableID>
+<keyObject>D9CBD4BA-BA63-2AE6-BAA1-3D3E04DA69AA</keyObject>
+<referredKeyID>D9CBD4BA-BA63-2AE6-BAA1-3D3E04DA69AA</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>room_id,floor_number,mark</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<discriminatorValue>Residence_Room</discriminatorValue>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

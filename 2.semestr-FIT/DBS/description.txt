@@ -1,0 +1,47 @@
+Databáze bude simulovat prostředí koleje 17. listopadu.
+
+Kolej je tvořena budovami A a B.
+Budova A má 20 pater a budova B 16 pater.
+
+Na koleji bydlí OBYVATELÉ. Každý obyvatel  má jméno a příjmení, věk a pohlaví.
+OBYVATELÉ jsou většinou studenti, a tak studují na školách. Obyvatel může studovat
+0-2 školy. STUIDUM má svoji délku, prospěhovou kvalitu a aktuální typ studia (Bc, Mgr, Phd)
+a zda je prezenční, či kombinované.
+Studenti studují na školách.
+Školy mají svůj rok založení, zaměření a prestiž, a typ financování (soukromé a veřejné)
+
+Zárověn je každý obyvatel povinen platit KOLEJNÉ.
+To se odvíjí od délky pobytu a statutu studenta.
+
+Díky platbě kolejné má obyvatel právo na POBYT. Ten se odlišuje délkou a počátečním datem.
+Obyvatelé bydlí na POKOJÍCH.
+Pokoje mají své unikatní číslo, stav ( rekonstruováno/ nerekonstruováno ), kapacitu (2/1),
+obsazenost.
+
+Pokoje obsahují NÁBYTEK, každý nábytek má svůj materiál, typ a rozměry.
+Pokoje jsou umíšteny v PATRECH, která jsou očíslována.
+
+Obyvatelé potřebují každý měsíc LŮŽKOVINY. Ty je možno získat v prádelně.
+Studenti do prádelny odnášejí použité lůžkoviny a odnášejí si vyprané.
+Lůžkoviny se liší vzory, stářím a tím, zda jsou vyprané.
+V prádelně pracují HOSPODÁŘKY. Ty lůžkoviny perou a vydávají.
+Odlišují se věkem, jménem, přijímením, pohlavím, platem, délkou v zaměstnání.
+
+Kromě toho jsou na koleji ještě KOLÁRNY, kterou provozují obyvatelé. Koláren je celkem 10 a každá
+obsahuje maximálně 20 kol. Kolárny mají svá identifikační čísla, naplněnost a jméno správce.
+KOLA mohou být jak silniční tak horská a každé má svoji značku, majitele
+a datum výroby.
+
+Obyvatelé mohou využívat kolejní místnosti. Ty se líší svým typem, rozměry, kapacitou a vytížeností. A rozmezí povolených hodin
+k využívání.
+Mezi ně patří hudební a počítačová místnost, studovna a posilovna.
+
+
+Entinty:
+	Kolejné, Patro, Pokoj, Nábytek, Pobyt, Obyvatelé, Školy, Studium, Lůžkoviny, Hospodářky, Kolárny, Kola, Kolejní místnost
+
+Dotazy:
+	1) Je na kolejích více silničních nebo horských kol ?
+	2) Kolik studentů platí kolejné nižsí než 4000 Kč ?
+	3) Kolik studentů nemá v pokoji ani stůl ani postel ?
+

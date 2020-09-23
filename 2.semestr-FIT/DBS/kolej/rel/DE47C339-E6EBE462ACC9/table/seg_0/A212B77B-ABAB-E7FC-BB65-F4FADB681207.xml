@@ -1,0 +1,110 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A212B77B-ABAB-E7FC-BB65-F4FADB681207" name="Room">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:09 UTC</createdTime>
+<generatorID>2EAAC5DF-C86A-ACBD-6BA8-5F7FB06B916E</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="floor_number" id="574B0B4A-21C0-1165-FC91-001244CBABF1">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:09 UTC</createdTime>
+<generatorID>402E3D38-7F49-7751-7ECA-9C75668EF125</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="66144271-C60F-53D0-D507-D8C527AB103B" referredColumn="F83053AC-E89A-2E19-F202-BAD60A7F4ACA"/>
+</associations>
+</Column>
+<Column name="room_id" id="1D061FB8-F87D-59BF-B77B-1C380999EA3D">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:09 UTC</createdTime>
+<generatorID>CD3FC323-0F92-31F3-BEF7-60D859C6953E</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="mark" id="0157F732-6A01-9ACF-BF66-CD29511F245C">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:09 UTC</createdTime>
+<generatorID>DEA1FF1D-19B0-016C-35F4-9A77DC228EFE</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>3 BYTE</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="66144271-C60F-53D0-D507-D8C527AB103B" referredColumn="914E6306-0CBD-9B5F-D1A6-50C9EE8207B0"/>
+</associations>
+</Column>
+<Column name="area" id="EDD959E3-196F-CEAC-1735-9EC147C23130">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:09 UTC</createdTime>
+<generatorID>826E703B-3787-9909-B10E-73587624CDD8</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Room_TYPE" id="61123B86-79EE-2620-50DF-9D0C5CE35CF7">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:09 UTC</createdTime>
+<ownerDesignName>kolej</ownerDesignName>
+<constraintName>CH_INH_Room</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>14</dataTypeSize>
+<listOfValues>
+<valueDef value="Bike_storage" description="entity Bike_storage"/>
+<valueDef value="Residence_Room" description="entity Residence_Room"/>
+</listOfValues>
+<ownDataTypeParameters>14,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isDiscriminatorColumn>true</isDiscriminatorColumn>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D9CBD4BA-BA63-2AE6-BAA1-3D3E04DA69AA" name="Room_PK">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:09 UTC</createdTime>
+<generatorID>83A1BBC8-53A9-B165-4D70-442543E4D921</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1D061FB8-F87D-59BF-B77B-1C380999EA3D"/>
+<colUsage columnID="574B0B4A-21C0-1165-FC91-001244CBABF1"/>
+<colUsage columnID="0157F732-6A01-9ACF-BF66-CD29511F245C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9403174E-AE57-A5C7-1D35-B4CA6D284D30" name="Room_Floor_FK">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:09 UTC</createdTime>
+<generatorID>948C7FF4-AD16-8E5E-71E2-ECF865D581D5</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="574B0B4A-21C0-1165-FC91-001244CBABF1"/>
+<colUsage columnID="0157F732-6A01-9ACF-BF66-CD29511F245C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

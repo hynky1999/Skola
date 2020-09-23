@@ -1,0 +1,65 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D01DEB61-8672-A7D3-7CAA-C1B6153EC94D" name="Floor">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:09 UTC</createdTime>
+<generatorID>34A779F6-1494-93B0-5C51-61F28F5F8931</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="floor_number" id="F83053AC-E89A-2E19-F202-BAD60A7F4ACA">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:09 UTC</createdTime>
+<generatorID>84A69D52-9B9B-BA41-29A4-78B0970D5897</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="mark" id="914E6306-0CBD-9B5F-D1A6-50C9EE8207B0">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:09 UTC</createdTime>
+<generatorID>5894426D-3178-A3DF-1BF0-900F13A7DE3D</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>3 BYTE</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B98B0967-B62E-3D16-357C-02AF977B286E" referredColumn="7FCA7ABB-3A7D-1CDE-9B0E-F59BCCD52D6C"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BF6CA978-885C-DDDD-F675-321F48A7CA59" name="Floor_PK">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:09 UTC</createdTime>
+<generatorID>1611BFEE-E842-3798-FE3E-28047C5D5EA6</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F83053AC-E89A-2E19-F202-BAD60A7F4ACA"/>
+<colUsage columnID="914E6306-0CBD-9B5F-D1A6-50C9EE8207B0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="54B9C06F-4D30-B157-E67F-D86B0668497D" name="Floor_Building_FK">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:09 UTC</createdTime>
+<generatorID>09E552EA-7F67-BC08-6CA7-EE93FD57C96E</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="914E6306-0CBD-9B5F-D1A6-50C9EE8207B0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

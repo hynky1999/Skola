@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Floor_placement" directorySegmentName="seg_0" id="09E552EA-7F67-BC08-6CA7-EE93FD57C96E">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-02-25 23:24:44 UTC</createdTime>
+<ownerDesignName>kolej</ownerDesignName>
+<engineerTo>
+<item key="18C31362-2C44-3DCB-DA62-C53461422788" value="true"/>
+</engineerTo>
+<sourcePk>6CEDF853-A30D-9B1E-A096-B2869891F5D2</sourcePk>
+<identifying>true</identifying>
+<nameOnSource>has</nameOnSource>
+<nameOnTarget>is in</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>71F5EED1-86D8-6A27-8648-3ABCD0A3F161</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>34A779F6-1494-93B0-5C51-61F28F5F8931</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

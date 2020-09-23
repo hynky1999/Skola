@@ -1,0 +1,29 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Diagram class="oracle.dbtools.crest.swingui.relational.DPVRelationalSubView" name="From_LM_Logical - SubView_1" id="C0DE13F4-B4F2-33AA-56E0-A1BD59B7E7DD">
+<createdBy>kydlihyn</createdBy>
+<modifiedBy>kydlihyn</modifiedBy>
+<createdTime>2020-04-10 23:27:41 UTC</createdTime>
+<autoRoute>false</autoRoute>
+<boxInbox>true</boxInbox>
+<showLegend>false</showLegend>
+<showLabels>false</showLabels>
+<showRelAttributes>false</showRelAttributes>
+<gridEnabled>false</gridEnabled>
+<showGrid>false</showGrid>
+<diagramColor>-1</diagramColor>
+<display>false</display>
+<generatorId>98DF6AED-7F6C-6C0D-40F9-8DCE7A36CC69</generatorId>
+<notation>1</notation>
+<objectViews>
+<OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="D435915A-A6A0-D9A7-8279-376FDAFEC05E" otype="Table" vid="1818E0CD-C55A-8E5C-79FA-7716D11B39ED">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="1015" y="380" width="139" height="77"/>
+<generatorID>33168760-2FC2-4B94-6C78-C82D84664A12</generatorID>
+</OView>
+<OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="F6805598-2F66-F269-BFF9-F1D353E32C8E" otype="Table" vid="B103FAA5-83CE-DF26-227B-E2654B010D63">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="1018" y="284" width="126" height="64"/>
+<generatorID>6E151CB2-3DFC-2F13-059B-37AFC260A97A</generatorID>
+</OView>
+</objectViews>
+</Diagram>

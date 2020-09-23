@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Bike_stored" directorySegmentName="seg_0" id="5FDA7A4C-E554-15AE-2AA9-FFFF643EBCE0">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-02-26 10:04:32 UTC</createdTime>
+<ownerDesignName>kolej</ownerDesignName>
+<engineerTo>
+<item key="18C31362-2C44-3DCB-DA62-C53461422788" value="true"/>
+</engineerTo>
+<sourcePk>83A1BBC8-53A9-B165-4D70-442543E4D921</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>stores</nameOnSource>
+<nameOnTarget>is stored in</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>2150DA2B-5763-8D70-1AD4-31B3E47A8767</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>EEEE6FB5-9902-C288-A292-82E3C23C5136</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

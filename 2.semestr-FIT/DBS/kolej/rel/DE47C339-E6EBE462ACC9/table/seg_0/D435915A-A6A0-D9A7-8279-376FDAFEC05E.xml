@@ -1,0 +1,123 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D435915A-A6A0-D9A7-8279-376FDAFEC05E" name="Bike_storage">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:09 UTC</createdTime>
+<generatorID>2150DA2B-5763-8D70-1AD4-31B3E47A8767</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="floor_number" id="8BCD90EC-0892-6BA6-CBAA-F0716ECEBFB4">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:09 UTC</createdTime>
+<generatorID>402E3D38-7F49-7751-7ECA-9C75668EF125</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="872BCABB-5444-9526-A46A-463C9BC62B20" referredColumn="574B0B4A-21C0-1165-FC91-001244CBABF1"/>
+</associations>
+</Column>
+<Column name="room_id" id="40AA4E9C-50AA-6ABF-BDDA-56ABA8895DE2">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:09 UTC</createdTime>
+<generatorID>CD3FC323-0F92-31F3-BEF7-60D859C6953E</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="872BCABB-5444-9526-A46A-463C9BC62B20" referredColumn="1D061FB8-F87D-59BF-B77B-1C380999EA3D"/>
+</associations>
+</Column>
+<Column name="mark" id="79422BE0-4F53-1BE6-9C8A-288E9BE09917">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:09 UTC</createdTime>
+<generatorID>DEA1FF1D-19B0-016C-35F4-9A77DC228EFE</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>3 BYTE</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="872BCABB-5444-9526-A46A-463C9BC62B20" referredColumn="0157F732-6A01-9ACF-BF66-CD29511F245C"/>
+</associations>
+</Column>
+<Column name="capacity" id="D79EDD58-5B63-44F0-8F1E-EEB8BC78D832">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:09 UTC</createdTime>
+<generatorID>204E5D00-B1BF-DE91-22EB-5D574C4DE20E</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="person_id" id="BD056505-6D29-7A81-CAE5-579EABBC708D">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:09 UTC</createdTime>
+<generatorID>8AC22306-14CE-835B-CD6C-10F07FCBFCBD</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2769AC89-0092-703F-4AD1-C4284B2286D5" referredColumn="7505AD36-3A7E-CD1C-9FD8-1724F3EF443B"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="955C3F74-C113-C054-D6A7-F278335E14D8" name="Bike_storage_PK">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:09 UTC</createdTime>
+<generatorID>83A1BBC8-53A9-B165-4D70-442543E4D921</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="40AA4E9C-50AA-6ABF-BDDA-56ABA8895DE2"/>
+<colUsage columnID="8BCD90EC-0892-6BA6-CBAA-F0716ECEBFB4"/>
+<colUsage columnID="79422BE0-4F53-1BE6-9C8A-288E9BE09917"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2869C9C1-F084-535E-4F76-374FB4A66431" name="Bike_storage_Room_FK">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:09 UTC</createdTime>
+<generatorID>AD5C8AE1-FB30-0836-6014-2E0C0E492566</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="40AA4E9C-50AA-6ABF-BDDA-56ABA8895DE2"/>
+<colUsage columnID="8BCD90EC-0892-6BA6-CBAA-F0716ECEBFB4"/>
+<colUsage columnID="79422BE0-4F53-1BE6-9C8A-288E9BE09917"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1BC3BB74-CCEE-4FDA-B97B-A4B1F772F46D" name="Bike_storage_Person_FK">
+<createdBy>kydlihyn</createdBy>
+<createdTime>2020-04-18 10:05:09 UTC</createdTime>
+<generatorID>5AF9EA6A-CF43-3A79-EC80-DCCA835DAB1B</generatorID>
+<ownerDesignName>kolej</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BD056505-6D29-7A81-CAE5-579EABBC708D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
