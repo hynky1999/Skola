@@ -1,14 +1,25 @@
 checkboard_size = 8
+cell_size = 2
+
+class Player:
+    def __init__(self, name):
+        self.name = name
+        self.active_pieces = []
 
 class Piece:
-    def __init__(self, player):
+    def __init__(self, player, y, x, movement, character, y_move):
         self.player = player
-        self.jump_list = []
-        self.threat_list = []
-        self.movement = 1
-        self.__y_move = [1]
-        self.__backwards = false
-        
+        self.movement = movement
+        self.character = character
+        self.y = y
+        self.x = x
+        self.y_move = 1
+        self.backwards = False
+
+    def move(self, y, x):
+        self.y = y
+        self.x = x
+
 class Checkboard:
     def __init__(self, player1, player2):
         self.board = []
@@ -16,160 +27,198 @@ class Checkboard:
         for i in range(checkboard_size):
             board.append([])
             for j in range(checkboard_size):
-                board += [Piece(None)]
-        
-        for i in range(2):
-           for j in range(checkboard_size):
-               board[i][j] = Piece(player1)
+                board += [None]
 
-        for i in range(2):
-           for j in range(checkboard_size):
-               board[i][j] = Piece(player2)
-               
+        for i in range(checkboard_size-3, checkboard_size, 2):
+           for j in range(i%2,checkboard_size):
+               board[i][j] = Piece(player1, i, j, 1, 'x', -1)
+
+        for i in range(3):
+           for j in range(i%2, checkboard_size, 2):
+               board[i][j] = Piece(player2, i, j, 1, 'o', 1)
+
+    def rowString(self):
+        string = ""
+        for i in range(checkboard_size+1):
+            string += "+"
+            for j in range(cell_size):
+                string += "-"
+        return string
+
+    def __str__(self):
+        global checkboard_size
+        global cell_size
+        string = ""
+        for i in range(checkboard_size):
+            string += self.rowString()
+            for j in range(checkboard_size):
+                string += '|'
+                if(self.board[i][j] == None):
+                    string += str(i) + str(j)
+                else:
+                    string += self.board[i][j]
+            string += '|'
+        string += self.rowString()
+        return string
+
+
+
+        
+
+
     def getBoard(self, i, j):
         return self.board[i][j]
 
-    def canJumpFromToLoc(self, start_loc, end_loc):
+    def getMoveToLocation(self, start_loc, end_loc, player):
         # No error checking
         # Diag move check
-        dist_y = abs(end_loc[0] - start_loc[0])
-        dist_x = abs(end_loc[1] - start_loc[1])
+        dist_y = end_loc[0] - start_loc[0]
+        dist_x = end_loc[1] - start_loc[1]
         if(dist_x == 0 or abs(dist_x) != abs(dist_y)):
-            return false
+            raise ValueError("Not diagonal Move")
 
         y_direction = int(dist_y/abs(dist_y))
         x_direction = int(dist_x/abs(dist_x))
-        piece = getboard(*start_loc)
-        other_piece = getboard(*end_loc)
-        if(piece.movement < dist or y_direction not in piece.movement or piece.player == other_piece.player):
-            return false
+        piece = self.getBoard(*start_loc)
+        if(y_direction not in piece.movement):
+            raise ValueError("Cannot move that direction")
 
-        if(getboard(end_loc[0] + y_direction, end_loc[1] + x_direcion)):
-            return true
-        return false
-
-    def canMoveFromToLoc(self, start_loc, end_loc):
-        # No error checking
-        # Diag move check
-        dist_y = abs(end_loc[0] - start_loc[0])
-        dist_x = abs(end_loc[1] - start_loc[1])
-        if(dist_x == 0 || dist_x != dist_y):
-            return false
-        y_direction = int((dist_y/abs(dist_y))
-        x_direction = int(dist_x/abs(dist_x))
-        if(piece.movement < dist_x || y_direction not in piece.movement):
-            return false
-        diag_loc = [start_loc[0] + dist_y, start_loc[1] + dist_x]
-        for(i in range(dist)):
-            if(board[*diag_loc]):
-                return false      
+        diag_loc = [start_loc[0] + y_direction, start_loc[1] + x_direction]
+        for i in range(1, abs(dist_x)):
+            if(self.getBoard(*diag_loc)):
+                raise ValueError("You have to put a piece right after overleaped piece")
             diag_loc = [start_loc[0] + dist_x, start_loc[1] + dist_y]
+        overleaped = self.getBoard(*diag_loc)
+        if(not overleaped):
+            if(piece.movement > abs(dist_x)):
+                raise ValueError()
+            return None
 
-        return true
+        if(piece.movement + 1 > abs(dist_x) or overleaped.player == player):
+            raise ValueError()
 
-    def __getItem__(self, key):
-       return __checkBoundry(*key) ? board[key[0]][key[1]] : None
+        return overleaped 
 
-    def lumpListUpdateEnter(self, piece, location): 
+
+    def checkGameSate(self, player1, player2):
+        # TODO add move victory
+        if(not player1.active_pieces):
+            return player1
+        if(not player2.active_pieces):
+            return player2
+
+
+    def pieceJumpable(self, piece): 
         #Coordinates are in y,x order as in matrices 
-        for(j in (1, -1)):
-            for(i in (1, -1)):
-                diag_loc = [location[0] + j, location[1] + i]
-                while(__checkBoundry(*diag_loc)):
-                    other_piece = board[diag_loc]
-                    if(other_piece):
-                        if(canJumpFromToLoc(location, diag_loc)):
-                            other_piece.threat_dict[(-j, -i)] = piece
-                            piece.jump_dict[(j, i)] += other_piece                        
-                        if(canJumpFromToLoc(diag_loc, location)):
-                            piece.threat_dict[(-j, -i)] = piece
-                            other_piece.jump_dict[(j, i)] = other_piece 
-                        break
-                    
-                    diag_loc = [diag_loc[0] + j, diag_loc[1] + i]
-        
-    def __checkBoundry(location)
-        for(loc in location):
-            if(loc > checkboard_size || loc < 0):
-                return false
-        return true
-               
-    def move(self, player, move_dict, error_message):
-        if (not self.__checkBoundry(move_dict["start"])):
-            error_message = "You can't move Location is out of bounds"
-            return false
+        y_direction = [piece.y_move]
+        if(piece.backwards):
+            y_direction += [-piece.y_move]
 
-        piece = board[*move_dict["start"]]
-        if(piece is None):
-            error_message = "There is no piece reatard"
-            return false
+        for j in y_direction:
+            for i in (1, -1):
+                diag_loc = [piece.y + j, piece.x + i]
+                try:
+                    for i in range(piece.movement):
+                        other_piece = self.getBoard(*diag_loc)
+                        if(
+                            other_piece
+                            and other_piece.player != piece.player
+                            and not self.getBoard(diag_loc[0] + j, diag_loc[1] + i)
+                        ):
+                            return True
+                        diag_loc = [diag_loc[0] + j, diag_loc[1] + i]
+                except:
+                    continue
+        return False
+
+    def findJumpable(self, player_pieces):
+        for piece in player_pieces:
+            if(self.pieceJumpable(piece)):
+                return piece
+
+        return None
+
+
+    def __checkBoundry(self, location):
+        for loc in location:
+            if(loc > checkboard_size or loc < 0):
+                return False
+        return True
+
+    def move(self, player, move_dict):
+        # if (not self.__checkBoundry(move_dict["start"])):
+        #     error_message = "You can't move Location is out of bounds"
+        #     return False
+
+        piece = self.getBoard(*move_dict["start"])
+        # if(piece is None):
+        #     error_message = "There is no piece reatard"
+        #     return False
 
         if(piece.player != player):
-            error_message = "Not your piece fool"
+            raise ValueError("Not your piece fool")
 
-        if(not self.__checkBoundry(move_dict["end"])):
-            error_message = "Move Location is out of bounds"
-            return false
-            
-        if(canMoveFromToLoc())
-            
-        forced_jump_pieces = [
-            jump_piece for jump_piece in player.active_pieces if
-            [jump_to_piece for jump_to_piece in piece.jump_dict.values()] == [None, None, None, None]
-        ]
-        if(forced_jump_pieces and (piece not in forced_jumps || move_dict["end"] not in forced_jumps[piece])):
-            error_message = "Force jump is required please jump"
-            return false
-        
-        board[*move_dict["end"]] = piece
-        del(board(*move_dict["start"]))
-        return true
+        # if(not self.__checkBoundry(move_dict["end"])):
+        #     error_message = "Move Location is out of bounds"
+        #     return False
+        overleaped_piece = self.getMoveToLocation(move_dict["start"], move_dict["end"], player)
+        if(not overleaped_piece):
+            if(self.findJumpable(player.active_pieces)):
+                raise ValueError("You better jump you fool")
 
-            
-class Box:
-    def __init__(self, location):
-        self.piece = None
-        self.location = location
-    def addPiece(self, piece):
-        self.piece != None ? return false: self.peice = piece; return true
-            
+            self.board[move_dict["end"][0]][move_dict["end"][1]] = piece
+            del(self.board[piece.y][piece.x])
+            return True
+
+        self.board[move_dict["end"][0]][move_dict["end"][1]] = piece
+        del(self.board[move_dict["start"][0]][move_dict["start"][1]])
+        piece.move(move_dict["end"][0][move_dict["end"][1]])
+
+        del(self.board[overleaped_piece.y][overleaped_piece.x])
+        player.active_pieces.remove(overleaped_piece)
+        return True
+
+
+
+def formatMove(move):
+    move.replace(" ", "")
+    return {"start":move[:2], "end":move[2:]}
 
 def processMove(checkboard, player):
-    while(true):
-        move = input("{} please input your turn".format(player)
-        move_dict = {}
-        if(not formatMove(move, move_list)):
-            print("Wrong input fool")
-            continue
-        message = ""
-        if(not checkboard.move(player, move_list, message))
-            print("Can't move there fool")
+    while(True):
+        move = input("{} please input your turn".format(player))
+        try:
+            move_dict = formatMove(move)
+            piece = checkboard.move(player, move_dict)
+            if(checkboard.pieceJumpable(piece)):
+                print("You can jump again")
+                continue
+        except:
+            print("Invalid Move")
+
+
     
-    return true
+    return True
 
 
 def startGame():
-    checkboard = []
-    player1 = Player()
-    player2 = Player()
+    player1 = Player("Petr")
+    player2 = Player("Hynek")
     checkboard = Checkboard(player1, player2)
     turn = 1
-    while(true):
+    while(True):
+        print(checkboard)
         if(turn%2):
             player_on_turn = player1
         else:
             player_on_turn = player2
-        processMove(player_on_turn, checkboard)
-        if(not checkGameSate(checkboard)):
+        processMove(checkboard, player_on_turn)
+        winner = checkboard.checkGameSate(player1, player2)
+        if(winner):
+            print("Vyhral hrac {}".format(winner.name))
             break
-    print("Sucessfully finished game")
+    input()
     return 1
 
-def initGame(player1, player2):
-    
 startGame()
-
-
-            
-
 
