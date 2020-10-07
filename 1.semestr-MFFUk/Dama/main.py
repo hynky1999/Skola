@@ -5,6 +5,8 @@ class Player:
     def __init__(self, name):
         self.name = name
         self.active_pieces = []
+    def __str__(self):
+        return self.name
 
 class Piece:
     def __init__(self, player, y, x, movement, character, y_move):
@@ -20,50 +22,58 @@ class Piece:
         self.y = y
         self.x = x
 
+    def __str__(self):
+        return self.character
+
 class Checkboard:
     def __init__(self, player1, player2):
         self.board = []
         global checkboard_size
         for i in range(checkboard_size):
-            board.append([])
+            self.board += [[]]
             for j in range(checkboard_size):
-                board += [None]
+                self.board[i] += [None]
 
-        for i in range(checkboard_size-3, checkboard_size, 2):
-           for j in range(i%2,checkboard_size):
-               board[i][j] = Piece(player1, i, j, 1, 'x', -1)
+
+        for i in range(checkboard_size-3, checkboard_size):
+           for j in range((i+1)%2,checkboard_size, 2):
+               self.board[i][j] = Piece(player2, i, j, 1, 'oo', -1)
 
         for i in range(3):
-           for j in range(i%2, checkboard_size, 2):
-               board[i][j] = Piece(player2, i, j, 1, 'o', 1)
+           for j in range((i+1)%2, checkboard_size, 2):
+               self.board[i][j] = Piece(player1, i, j, 1, 'xx', 1)
 
-    def rowString(self):
+    def __rowString(self):
         string = ""
-        for i in range(checkboard_size+1):
-            string += "+"
+        for i in range(checkboard_size + 1):
             for j in range(cell_size):
                 string += "-"
+            string += "+"
+        string += '\n'
         return string
 
     def __str__(self):
         global checkboard_size
         global cell_size
         string = ""
-        for i in range(checkboard_size):
-            string += self.rowString()
-            for j in range(checkboard_size):
+        for i in range(checkboard_size-1, -1, -1):
+            string += self.__rowString()
+            string += str(i+1) + ' '
+            for j in range(checkboard_size-1, -1, -1):
                 string += '|'
                 if(self.board[i][j] == None):
-                    string += str(i) + str(j)
+                    string += '  '
                 else:
-                    string += self.board[i][j]
+                    string += str(self.board[i][j])
+            string += '|\n'
+        string += self.__rowString()
+        string += '  '
+        for i in range(checkboard_size):
             string += '|'
-        string += self.rowString()
+            string += chr(ord('A') + i) + ' '
+        string += '\n'
+        string += self.__rowString()
         return string
-
-
-
-        
 
 
     def getBoard(self, i, j):
@@ -72,6 +82,7 @@ class Checkboard:
     def getMoveToLocation(self, start_loc, end_loc, player):
         # No error checking
         # Diag move check
+        __import__('pdb').set_trace()
         dist_y = end_loc[0] - start_loc[0]
         dist_x = end_loc[1] - start_loc[1]
         if(dist_x == 0 or abs(dist_x) != abs(dist_y)):
@@ -151,6 +162,7 @@ class Checkboard:
         #     return False
 
         piece = self.getBoard(*move_dict["start"])
+        __import__('pdb').set_trace()
         # if(piece is None):
         #     error_message = "There is no piece reatard"
         #     return False
@@ -181,19 +193,22 @@ class Checkboard:
 
 
 def formatMove(move):
-    move.replace(" ", "")
-    return {"start":move[:2], "end":move[2:]}
+    move = move.replace(" ", "")
+    return {"start":[int(move[0]) - 1, int(move[1]) - 1], "end":[int(move[2]) - 1, int(move[3]) - 1]}
 
 def processMove(checkboard, player):
     while(True):
-        move = input("{} please input your turn".format(player))
+        # move = input("{} please input your turn".format(player))
+        move = "31 42"
         try:
             move_dict = formatMove(move)
             piece = checkboard.move(player, move_dict)
             if(checkboard.pieceJumpable(piece)):
                 print("You can jump again")
                 continue
-        except:
+        except ValueError as e:
+            print(e)
+        except ZeroDivisionError:
             print("Invalid Move")
 
 
@@ -219,6 +234,5 @@ def startGame():
             break
     input()
     return 1
-
 startGame()
 
