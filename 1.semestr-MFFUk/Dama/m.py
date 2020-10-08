@@ -24,8 +24,6 @@ class Piece:
 
     def __str__(self):
         return self.character
-    def __repr__(self):
-        return (self.y, self.x)
 
 class Checkboard:
     def __init__(self, player1, player2):
@@ -86,8 +84,6 @@ class Checkboard:
     def getMoveToLocation(self, start_loc, end_loc, player):
         # No error checking
         # Diag move check
-        if(self.getBoard(*end_loc)):
-            raise ValueError("Cannot Move there someone is standing there")
         dist_y = end_loc[0] - start_loc[0]
         dist_x = end_loc[1] - start_loc[1]
         if(dist_x == 0 or abs(dist_x) != abs(dist_y)):
@@ -100,9 +96,9 @@ class Checkboard:
             raise ValueError("Cannot move that direction")
 
         diag_loc = [start_loc[0] + y_direction, start_loc[1] + x_direction]
-        for i in range(1, abs(dist_x)-1):
+        for i in range(1, abs(dist_x)):
             if(self.getBoard(*diag_loc)):
-                raise ValueError("There is something in the way {} {}".format(diag_loc[0] + 1, diag_loc[1] + 1))
+                raise ValueError("You have to put a piece right after overleaped piece")
             diag_loc = [start_loc[0] + dist_x, start_loc[1] + dist_y]
         overleaped = self.getBoard(*diag_loc)
         if(not overleaped):
@@ -134,20 +130,17 @@ class Checkboard:
             for i in (1, -1):
                 diag_loc = [piece.y + j, piece.x + i]
                 try:
-                    for alfa in range(piece.movement):
+                    for i in range(piece.movement):
+                        if(piece.x == 1 and piece.y == 4):
+                            __import__('pdb').set_trace()
                         if(not self.__checkBoundry([diag_loc[0] + j, diag_loc[1] + i])):
                             break
                         other_piece = self.getBoard(*diag_loc)
-                        print(other_piece.y + 1, other_piece.x + 1)
                         if(
                             other_piece
                             and other_piece.player != piece.player
                             and not self.getBoard(diag_loc[0] + j, diag_loc[1] + i)
                         ):
-                            print("Piece ",piece.y +1, piece.x +1)
-                            print("found jump ",diag_loc[0] +1, diag_loc[1] + 1)
-                            print(diag_loc[0] + j + 1, diag_loc[1] + i + 1)
-                            print(i,j)
                             return True
                         diag_loc = [diag_loc[0] + j, diag_loc[1] + i]
                 except:
@@ -164,7 +157,7 @@ class Checkboard:
 
     def __checkBoundry(self, location):
         for loc in location:
-            if(loc >= checkboard_size or loc < 0):
+            if(loc[0] >= checkboard_size or loc < 0):
                 return False
         return True
 
@@ -198,7 +191,7 @@ class Checkboard:
         self.board[piece.y][piece.x] = None
         piece.move(move_dict["end"][0],move_dict["end"][1])
         self.board[overleaped_piece.y][overleaped_piece.x] = None
-        overleap.player.active_pieces.remove(overleaped_piece)
+        player.active_pieces.remove(overleaped_piece)
         overleap = True
         return piece
 
@@ -240,7 +233,6 @@ def startGame():
     checkboard = Checkboard(player1, player2)
     turn = 1
     while(True):
-        print(turn)
         print(checkboard)
         if(turn%2):
             player_on_turn = player1
