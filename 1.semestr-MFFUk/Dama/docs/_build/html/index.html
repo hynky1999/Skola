@@ -1,0 +1,753 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Welcome to Dama’s documentation! &#8212; Dama 1.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-Dama.main">
+<span id="welcome-to-dama-s-documentation"></span><h1>Welcome to Dama’s documentation!<a class="headerlink" href="#module-Dama.main" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="Dama.main.Checkboard">
+<em class="property">class </em><code class="descclassname">Dama.main.</code><code class="descname">Checkboard</code><span class="sig-paren">(</span><em>player1</em>, <em>player2</em><span class="sig-paren">)</span><a class="headerlink" href="#Dama.main.Checkboard" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class representing checkboard represent as matrix.</p>
+<p>This class is basically interfrace for manipulating with pieces on
+checkboard itself. Each box on checkboard is represented by matrix
+thus number is as in matrix first y axis then x axis and indexing is
+from zero.</p>
+<dl class="method">
+<dt id="Dama.main.Checkboard.checkPlayerDefeat">
+<code class="descname">checkPlayerDefeat</code><span class="sig-paren">(</span><em>checkboard</em>, <em>player</em><span class="sig-paren">)</span><a class="headerlink" href="#Dama.main.Checkboard.checkPlayerDefeat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function which checks if player is defeated.</p>
+<p>Player is defeat if either 1) has no active pieces on board
+2) cannot move with any of his pieces.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>checkboard</strong> (<a class="reference internal" href="#Dama.main.Checkboard" title="Dama.main.Checkboard"><em>Checkboard</em></a>) – context = checkboard
+on which the piece is placed.</li>
+<li><strong>player</strong> (<a class="reference internal" href="#Dama.main.Player" title="Dama.main.Player"><em>Player</em></a>) – player to check against.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">True if is defeat else otherwise.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">bool</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Dama.main.Checkboard.getBoard">
+<code class="descname">getBoard</code><span class="sig-paren">(</span><em>location</em><span class="sig-paren">)</span><a class="headerlink" href="#Dama.main.Checkboard.getBoard" title="Permalink to this definition">¶</a></dt>
+<dd><p>Getter of self.board.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>location</strong> (<a class="reference internal" href="#Dama.main.Location" title="Dama.main.Location"><em>Location</em></a>) – lookup location.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">returns Piece on board at specified location
+or None if there is none.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#Dama.main.Piece" title="Dama.main.Piece">Piece</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><code class="xref py py-exc docutils literal notranslate"><span class="pre">IndexError</span></code> – If location is not on board.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Dama.main.Checkboard.move">
+<code class="descname">move</code><span class="sig-paren">(</span><em>player</em>, <em>move_dict</em><span class="sig-paren">)</span><a class="headerlink" href="#Dama.main.Checkboard.move" title="Permalink to this definition">¶</a></dt>
+<dd><p>Core function Checkboard, moves piece to specified location by move_dict.</p>
+<p>move_dict must contain two keys: “start” and “end”
+which specifies starting and ending location of move.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>player</strong> (<a class="reference internal" href="#Dama.main.Player" title="Dama.main.Player"><em>Player</em></a>) – player who is doing the move.</li>
+<li><strong>(</strong><strong>dict</strong> (<em>move_dict</em>) – <cite>str</cite>:<cite>Location</cite>): Dictionary
+with keys “start” and “end” and their values of type Location</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><dl class="docutils">
+<dt>piece which was moved</dt>
+<dd><p class="first last">and location if an overleap occured</p>
+</dd>
+</dl>
+</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">(<a class="reference internal" href="#Dama.main.Piece" title="Dama.main.Piece">Piece</a>, <a class="reference internal" href="#Dama.main.Location" title="Dama.main.Location">Location</a>)</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code> – If there was problem with moving a piece
+because of ownership etc.</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">IndexError</span></code> – If locations are out of bounds
+or end location is occupied etc.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Dama.main.King">
+<em class="property">class </em><code class="descclassname">Dama.main.</code><code class="descname">King</code><span class="sig-paren">(</span><em>player</em>, <em>location</em><span class="sig-paren">)</span><a class="headerlink" href="#Dama.main.King" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class representing single King on checkboard.</p>
+<p>Implementation of Piece which represents King
+little bit overkill for such a small
+application but would be usefull for further scalability.
+Unlike Man, King can jump to any diagonal location.</p>
+<dl class="method">
+<dt id="Dama.main.King.canMoveTo">
+<code class="descname">canMoveTo</code><span class="sig-paren">(</span><em>checkboard</em>, <em>end</em><span class="sig-paren">)</span><a class="headerlink" href="#Dama.main.King.canMoveTo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Implementation of Base class function canMoveFromTo</p>
+<blockquote>
+<div>Checks if man can move/jump to specific location from start
+Care with usage of this function there is no checking of boundries</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>checkboard</strong> (<a class="reference internal" href="#Dama.main.Checkboard" title="Dama.main.Checkboard"><em>Checkboard</em></a>) – context = checkboard
+on which the piece is placed</li>
+<li><strong>end</strong> (<a class="reference internal" href="#Dama.main.Location" title="Dama.main.Location"><em>Location</em></a>) – end location of movement</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><dl class="docutils">
+<dt>Returns if it is possible to move to location</dt>
+<dd><p class="first last">Location is location of overleaped piece if exists</p>
+</dd>
+</dl>
+</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">bool, <a class="reference internal" href="#Dama.main.Location" title="Dama.main.Location">Location</a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">IndexError</span></code> – If end location is not valid</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code> – If move is not diagonal or direction is wrong</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Dama.main.King.jumpPossible">
+<code class="descname">jumpPossible</code><span class="sig-paren">(</span><em>checkboard</em><span class="sig-paren">)</span><a class="headerlink" href="#Dama.main.King.jumpPossible" title="Permalink to this definition">¶</a></dt>
+<dd><p>Implementation of Base class function jumpPossible.</p>
+<p>Function tries all possible jump location
+until it finds one possible or none.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>checkboard</strong> (<a class="reference internal" href="#Dama.main.Checkboard" title="Dama.main.Checkboard"><em>Checkboard</em></a>) – context = checkboard
+on which the piece is placed</li>
+<li><strong>start</strong> (<a class="reference internal" href="#Dama.main.Location" title="Dama.main.Location"><em>Location</em></a>) – start location of jump</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">location of possible jump else None.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#Dama.main.Location" title="Dama.main.Location">Location</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Dama.main.King.movePossible">
+<code class="descname">movePossible</code><span class="sig-paren">(</span><em>checkboard</em><span class="sig-paren">)</span><a class="headerlink" href="#Dama.main.King.movePossible" title="Permalink to this definition">¶</a></dt>
+<dd><p>Implementation of Base class function movePossible.</p>
+<p>Method which checks if piece can move to any location.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>checkboard</strong> (<a class="reference internal" href="#Dama.main.Checkboard" title="Dama.main.Checkboard"><em>Checkboard</em></a>) – context = checkboard
+on which the piece is placed.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">location of possible move/jump.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#Dama.main.Location" title="Dama.main.Location">Location</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Dama.main.Location">
+<em class="property">class </em><code class="descclassname">Dama.main.</code><code class="descname">Location</code><span class="sig-paren">(</span><em>y</em>, <em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#Dama.main.Location" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simple wrapper for location definition</p>
+<dl class="attribute">
+<dt id="Dama.main.Location.y">
+<code class="descname">y</code><a class="headerlink" href="#Dama.main.Location.y" title="Permalink to this definition">¶</a></dt>
+<dd><p>y coordinate</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Dama.main.Location.x">
+<code class="descname">x</code><a class="headerlink" href="#Dama.main.Location.x" title="Permalink to this definition">¶</a></dt>
+<dd><p>x coordinate</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Dama.main.Location.isDiagonal">
+<code class="descname">isDiagonal</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Dama.main.Location.isDiagonal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if location is diagonal eg. (1,-1)
+:returns: true if diagonal else otherwise
+:rtype: bool</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Dama.main.Location.isZero">
+<code class="descname">isZero</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Dama.main.Location.isZero" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if location is Zero eg. (0,0)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">true if diagonal else otherwise</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Dama.main.Location.normalized">
+<code class="descname">normalized</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Dama.main.Location.normalized" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates and returns normalized location</p>
+<p>Doesn’t make sense for non diagonal
+eg (4,4) -&gt; (1,1), (-5,5) -&gt; (-1,1)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">normalized location</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#Dama.main.Location" title="Dama.main.Location">Location</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Dama.main.Man">
+<em class="property">class </em><code class="descclassname">Dama.main.</code><code class="descname">Man</code><span class="sig-paren">(</span><em>player</em>, <em>location</em>, <em>y_direction=1</em><span class="sig-paren">)</span><a class="headerlink" href="#Dama.main.Man" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class representing single man on checkboard.</p>
+<p>Implementation of Piece class and is little bit overkill for such a small
+application but would be usefull for further scalability.
+Man can only jump in 1 y axis diagonally and by one box at a time.</p>
+<dl class="method">
+<dt id="Dama.main.Man.canMoveTo">
+<code class="descname">canMoveTo</code><span class="sig-paren">(</span><em>checkboard</em>, <em>end</em><span class="sig-paren">)</span><a class="headerlink" href="#Dama.main.Man.canMoveTo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Implementation of Base class function canMoveTo.</p>
+<p>Function checks if it is possible to move/jump to end location
+Care with usage of this function there is no checking of boundries.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>checkboard</strong> (<a class="reference internal" href="#Dama.main.Checkboard" title="Dama.main.Checkboard"><em>Checkboard</em></a>) – context = checkboard
+on which the piece is placed.</li>
+<li><strong>end</strong> (<a class="reference internal" href="#Dama.main.Location" title="Dama.main.Location"><em>Location</em></a>) – end location of movement.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><dl class="docutils">
+<dt>Returns location of overleaped piece if exists else None.</dt>
+<dd><p class="first last">If move is not possible raises Error.</p>
+</dd>
+</dl>
+</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="#Dama.main.Location" title="Dama.main.Location">Location</a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">IndexError</span></code> – If end location is not valid.</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code> – If move is not diagonal/too long or direction is wrong.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Dama.main.Man.jumpPossible">
+<code class="descname">jumpPossible</code><span class="sig-paren">(</span><em>checkboard</em><span class="sig-paren">)</span><a class="headerlink" href="#Dama.main.Man.jumpPossible" title="Permalink to this definition">¶</a></dt>
+<dd><p>Implementation of Base class function jumpPossible.</p>
+<p>Function tries all possible jump location
+until it find one possible or none.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>checkboard</strong> (<a class="reference internal" href="#Dama.main.Checkboard" title="Dama.main.Checkboard"><em>Checkboard</em></a>) – context = checkboard
+on which the piece is placed.</li>
+<li><strong>start</strong> (<a class="reference internal" href="#Dama.main.Location" title="Dama.main.Location"><em>Location</em></a>) – start location of jump.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">location of possible jump else None.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#Dama.main.Location" title="Dama.main.Location">Location</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Dama.main.Man.movePossible">
+<code class="descname">movePossible</code><span class="sig-paren">(</span><em>checkboard</em><span class="sig-paren">)</span><a class="headerlink" href="#Dama.main.Man.movePossible" title="Permalink to this definition">¶</a></dt>
+<dd><p>Implementation of Base class function movePossible.</p>
+<p>Method which checks if piece can move to any location.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>checkboard</strong> (<a class="reference internal" href="#Dama.main.Checkboard" title="Dama.main.Checkboard"><em>Checkboard</em></a>) – context = checkboard
+on which the piece is placed.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">location of possible move/jump.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#Dama.main.Location" title="Dama.main.Location">Location</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Dama.main.Piece">
+<em class="property">class </em><code class="descclassname">Dama.main.</code><code class="descname">Piece</code><span class="sig-paren">(</span><em>player</em>, <em>location</em><span class="sig-paren">)</span><a class="headerlink" href="#Dama.main.Piece" title="Permalink to this definition">¶</a></dt>
+<dd><p>Abstract Base class representing single piece on checkboard.</p>
+<p>Piece is abstract class which serves as wrapper
+for checking possible moves.
+Piece is aware of its position board however
+when moving piece it has to be populated
+to Piece and Checkboard matrix(board).</p>
+<dl class="attribute">
+<dt id="Dama.main.Piece.player">
+<code class="descname">player</code><a class="headerlink" href="#Dama.main.Piece.player" title="Permalink to this definition">¶</a></dt>
+<dd><p>owner of piece.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="#Dama.main.Player" title="Dama.main.Player">Player</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Dama.main.Piece.canMoveTo">
+<code class="descname">canMoveTo</code><span class="sig-paren">(</span><em>checkboard</em>, <em>end</em><span class="sig-paren">)</span><a class="headerlink" href="#Dama.main.Piece.canMoveTo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method which checks if piece can move to end location.</p>
+<blockquote>
+<div>Care with usage of this function there is no checking of boundries.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>checkboard</strong> (<a class="reference internal" href="#Dama.main.Checkboard" title="Dama.main.Checkboard"><em>Checkboard</em></a>) – context = checkboard
+on which the piece is placed.</li>
+<li><strong>end</strong> (<a class="reference internal" href="#Dama.main.Location" title="Dama.main.Location"><em>Location</em></a>) – end location of movement.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><dl class="docutils">
+<dt>Returns location of overleaped piece if exists else None.</dt>
+<dd><p class="first last">If move is not possible raises Error.</p>
+</dd>
+</dl>
+</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="#Dama.main.Location" title="Dama.main.Location">Location</a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">IndexError</span></code> – If end location is not valid.</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code> – If move is not diagonal/too long or direction is wrong.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Dama.main.Piece.getLocation">
+<code class="descname">getLocation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Dama.main.Piece.getLocation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method for getting location of Piece on board</p>
+<p>This method is basically getter for self._location
+and python decorators could be
+used in this place but this makes more sense from object perspective.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">location of piece</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#Dama.main.Location" title="Dama.main.Location">Location</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Dama.main.Piece.jumpPossible">
+<code class="descname">jumpPossible</code><span class="sig-paren">(</span><em>checkboard</em><span class="sig-paren">)</span><a class="headerlink" href="#Dama.main.Piece.jumpPossible" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method which checks if piece can jump over enemey piece.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>checkboard</strong> (<a class="reference internal" href="#Dama.main.Checkboard" title="Dama.main.Checkboard"><em>Checkboard</em></a>) – context = checkboard
+on which the piece is placed.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">location of possible jump, else None.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#Dama.main.Location" title="Dama.main.Location">Location</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Dama.main.Piece.movePossible">
+<code class="descname">movePossible</code><span class="sig-paren">(</span><em>checkboard</em><span class="sig-paren">)</span><a class="headerlink" href="#Dama.main.Piece.movePossible" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method which checks if piece can move to any location.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>checkboard</strong> (<a class="reference internal" href="#Dama.main.Checkboard" title="Dama.main.Checkboard"><em>Checkboard</em></a>) – context = checkboard
+on which the piece is placed.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">location of possible jump/move, else None</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#Dama.main.Location" title="Dama.main.Location">Location</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Dama.main.Piece.moveTo">
+<code class="descname">moveTo</code><span class="sig-paren">(</span><em>end</em><span class="sig-paren">)</span><a class="headerlink" href="#Dama.main.Piece.moveTo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method for moving piece to specified location no checking.</p>
+<p>This method is basically setter for self._location
+and python decorators could be
+used in this place but this makes more sense from object perspective.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>end</strong> (<a class="reference internal" href="#Dama.main.Location" title="Dama.main.Location"><em>Location</em></a>) – end location of movement.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Dama.main.Player">
+<em class="property">class </em><code class="descclassname">Dama.main.</code><code class="descname">Player</code><span class="sig-paren">(</span><em>name</em>, <em>upgrade_row</em>, <em>piece_chars</em><span class="sig-paren">)</span><a class="headerlink" href="#Dama.main.Player" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class for representing/storing data about player his active pieces.</p>
+<dl class="attribute">
+<dt id="Dama.main.Player.active_pieces">
+<code class="descname">active_pieces</code><a class="headerlink" href="#Dama.main.Player.active_pieces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Player’s pieces which are still in game.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">list</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Dama.main.Player.piece_chars">
+<code class="descname">piece_chars</code><a class="headerlink" href="#Dama.main.Player.piece_chars" title="Permalink to this definition">¶</a></dt>
+<dd><p>mapping from pice type to 1 character.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">dict</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Dama.main.Player.findJumpable">
+<code class="descname">findJumpable</code><span class="sig-paren">(</span><em>checkboard</em><span class="sig-paren">)</span><a class="headerlink" href="#Dama.main.Player.findJumpable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function which finds first player’s piece that can jump.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>checkboard</strong> (<a class="reference internal" href="#Dama.main.Checkboard" title="Dama.main.Checkboard"><em>Checkboard</em></a>) – context = checkboard on which
+the piece is placed.</td>
+</tr>
+</tbody>
+</table>
+<p>Returns Piece: first jumpable piece found else None.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Dama.main.Player.findMoveable">
+<code class="descname">findMoveable</code><span class="sig-paren">(</span><em>checkboard</em><span class="sig-paren">)</span><a class="headerlink" href="#Dama.main.Player.findMoveable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function which finds first player’s piece that can move/jump.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>checkboard</strong> (<a class="reference internal" href="#Dama.main.Checkboard" title="Dama.main.Checkboard"><em>Checkboard</em></a>) – context = checkboard on
+which the piece is placed.</td>
+</tr>
+</tbody>
+</table>
+<p>Returns Piece: first moveable piece by non jumping found else None.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Dama.main.Player.upgradableLocation">
+<code class="descname">upgradableLocation</code><span class="sig-paren">(</span><em>piece</em><span class="sig-paren">)</span><a class="headerlink" href="#Dama.main.Player.upgradableLocation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to check if piece in upgadable row.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>piece</strong> (<a class="reference internal" href="#Dama.main.Piece" title="Dama.main.Piece"><em>Piece</em></a>) – piece to be checked.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="Dama.main.formatMove">
+<code class="descclassname">Dama.main.</code><code class="descname">formatMove</code><span class="sig-paren">(</span><em>move</em><span class="sig-paren">)</span><a class="headerlink" href="#Dama.main.formatMove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simple function which formats user input
+Expected input is [a-zA-Z]d[a-zA-z]d with spaces anywhere.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>move</strong> (<em>str</em>) – input of user describing move.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="docutils">
+<dt><cite>Location</cite>: dictionary with keys “start” and “end”.</dt>
+<dd>and their respecitve location
+in range(checkboard_size-1, checkboard_size-1).</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">dict::<cite>str</cite></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code> – if format is wrong.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="Dama.main.processMove">
+<code class="descclassname">Dama.main.</code><code class="descname">processMove</code><span class="sig-paren">(</span><em>checkboard</em>, <em>player</em><span class="sig-paren">)</span><a class="headerlink" href="#Dama.main.processMove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function for getting user input and moving Piece.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>checkboard</strong> (<a class="reference internal" href="#Dama.main.Checkboard" title="Dama.main.Checkboard"><em>Checkboard</em></a>) – context = checkboard
+on which the piece is placed.</li>
+<li><strong>player</strong> (<a class="reference internal" href="#Dama.main.Player" title="Dama.main.Player"><em>Player</em></a>) – player who is doing the move.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="Dama.main.startGame">
+<code class="descclassname">Dama.main.</code><code class="descname">startGame</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Dama.main.startGame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function which setup and loops the game.</p>
+<p>Current implementation setup game for two player who input
+their names and then game starts.
+White man is ‘x’, white king is ‘X’.
+Black man is ‘o’, black ing is ‘O’.
+First white piece is placed on A1 second on C1 etc. for first 3 rows.
+First black piece is placed on A8 second on C8 etc. for last 3 rows.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<div class="toctree-wrapper compound">
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
+<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
+<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
+</ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">Dama</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Hynek Kydlicek.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
