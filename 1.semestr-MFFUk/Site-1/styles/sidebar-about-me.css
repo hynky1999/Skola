@@ -1,0 +1,45 @@
+:root {
+    --black: #04214f;
+    --grey: #6a748a;
+    --blue1: #20497a;
+    --blue2: #bccee3;
+    --brown: #5e4d09;
+}
+
+.sidebar a {
+    padding: 0.1em;
+    text-decoration: none;
+}
+
+.sidebar img[alt="Hynek Kydlicek picture"]{
+    max-height: 100px;
+    max-width: 100%;
+    border-radius: 30%;
+}
+.sidebar *{
+    margin: 0;
+    color: var(--black);
+}
+
+.sidebar{
+    font-family: 'Source Sans Pro', sans-serif;
+    position: sticky;
+    top: 2em;
+}
+
+.sidebar-me > *{
+    padding: 0.1em;
+}
+.sidebar-links{
+    margin: 0.2em 0 1.2em 0;
+}
+.sidebar-links > a{
+    text-align: center;
+    margin-right: 0.3em;
+    color: var(--grey);
+    font-weight: bold;
+}
+.sidebar-locations h3{
+    margin: 0 0 0.1em 0;
+    font-weight: bold;
+}

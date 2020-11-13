@@ -1,8 +1,8 @@
 # Let us define some constants
-CXX= g++-8
+CXX= g++
 CXXFLAGS= -std=c++17 -lstdc++fs -Wall -pedantic
 LIB= -lpng -lexiv2 -lstdc++fs
-LD= g++-8
+LD= g++
 LDFLAGS = -std=c++17
 NAME=kydlihyn
 SRC=src

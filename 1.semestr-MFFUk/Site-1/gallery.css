@@ -1,0 +1,40 @@
+:root {
+    --black: #04214f;
+    --grey: #6a748a;
+    --blue1: #20497a;
+    --blue2: #bccee3;
+    --brown: #5e4d09;
+}
+
+.gallery *{
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+    color: var(--black);
+}
+.gallery {
+    display: grid;
+    grid-gap: 1em;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.gallery figure {
+    padding: 0.5em;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column wrap;
+}
+.gallery figcaption{
+    margin: 0.2em 0 0 0;
+    padding: 0.5em 0 0 0;
+    flex 1;
+    border-top: 3px solid var(--black);
+}
+.gallery img {
+    transition: opacity 0.3s ease-in-out;
+    max-width: 100%;
+    object-fit: cover;
+}
+.gallery img:hover{
+    opacity: 0.7;
+}

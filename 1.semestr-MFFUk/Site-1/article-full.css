@@ -1,0 +1,41 @@
+:root {
+    --black: #04214f;
+    --grey: #6a748a;
+    --blue1: #20497a;
+    --blue2: #bccee3;
+    --brown: #5e4d09;
+}
+
+
+article *{
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+    color: var(--black);
+}
+
+article header h1{
+    font-size: 3em;
+    text-align: center;
+    padding: 0.5em;
+}
+
+article footer{
+    font-size: 1.2em;
+    text-align: right;
+}
+
+article footer:before{
+    content:"Author: ";
+}
+
+article p {
+    line-height: 1.5;
+    word-spacing: 0.1em;
+    padding: 0.5em;
+    text-indent: 1em;
+}
+
+article section > h2{
+    font-size: 1.5em;
+    text-decoration: underline;
+}

@@ -1,0 +1,24 @@
+body {
+    display: grid;
+    grid-template-areas:
+    "header"
+    "content"
+    "footer";
+    grid-template-columns: 1fr;
+    margin: 5em 2.5em 2.5em 2.5em;
+}
+
+body > main{
+    grid-area: content;
+}
+
+body > footer{
+    margin: 2.5em 0 0 0;
+    color: var(--black);
+    font-family: 'Source Sans Pro', sans-serif;
+    grid-area: footer;
+    text-align: right;
+}
+body > header{
+    grid-area: header;
+}
