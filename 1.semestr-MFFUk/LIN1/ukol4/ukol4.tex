@@ -1,0 +1,151 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[czech]{babel}
+\usepackage{amsmath, amssymb}
+
+
+% figure support
+\usepackage{import}
+\usepackage{xifthen}
+\pdfminorversion=7
+\usepackage{pdfpages}
+\usepackage{transparent}
+\newcommand{\incfig}[1]{%
+    \def\svgwidth{\columnwidth}
+    \import{./figures/}{#1.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+\author{Hynek Kydlicek}
+\title{}
+\begin{document}
+\maketitle
+\section{Dcv. 2}
+\begin{align*}
+\left(
+\begin{array}{ c c c | c c c }
+    1 & -1 & 1 & 1 & 0 & 0\\
+    0 & 2 & -1 & 0 & 1 & 0\\
+    -2 & 0 & 1 & 0 & 0 & 1
+\end{array}
+\right)
+&\sim
+\left(
+\begin{array}{ c c c | c c c }
+    1 & -1 & 1 & 1 & 0 & 0\\
+    0 & 2 & -1 & 0 & 1 & 0\\
+    0 & -2 & 3 & 2 & 0 & 1
+\end{array}
+\right)
+&\sim
+\left(
+\begin{array}{ c c c | c c c }
+    1 & -1 & 1 & 1 & 0 & 0\\
+    0 & 2 & -1 & 0 & 1 & 0\\
+    0 & 0 & 2 & 2 & 1 & 1
+\end{array}
+\right)
+&\sim
+\\
+\left(
+\begin{array}{ c c c | c c c }
+    1 & -1 & 0 & 0 & -\frac{1}{2} & -\frac{1}{2}\\
+    0 & 2 & 0 & 1 & \frac{3}{2} & \frac{1}{2}\\
+    0 & 0 & 1 & 1 & \frac{1}{2} & \frac{1}{2}
+\end{array}
+\right)
+&\sim
+\left(
+\begin{array}{ c c c | c c c }
+    1 & 0 & 0 & \frac{1}{2} & \frac{1}{4} & -\frac{1}{4}\\
+    0 & 1 & 0 & \frac{1}{2} & \frac{3}{4} & \frac{1}{4}\\
+    0 & 0 & 1 & 1 & \frac{1}{2} & \frac{1}{2}
+\end{array}
+\right)
+\end{align*}
+\\
+Matice 
+$
+\left(
+\begin{array}{ c c c }
+     \frac{1}{2} & \frac{1}{4} & -\frac{1}{4}\\
+     \frac{1}{2} & \frac{3}{4} & \frac{1}{4}\\
+     1 & \frac{1}{2} & \frac{1}{2}
+\end{array}
+\right)
+$
+je hledaná inverz.
+Oveříme zkouškou.dasfasdf
+\begin{align*}
+\left(
+\begin{array}{ c c c }
+    1 & -1 & 1\\
+    0 & 2 & -1 \\
+    -2 & 0 & 1
+\end{array}
+\right)
+*
+\left(
+\begin{array}{ c c c }
+     \frac{1}{2} & \frac{1}{4} & -\frac{1}{4}\\
+    \frac{1}{2} & \frac{3}{4} & \frac{1}{4}\\
+    1 & \frac{1}{2} & \frac{1}{2}
+\end{array}
+\right)
+=
+\left(
+\begin{array}{c c c}
+    \frac{1}{2} - \frac{1}{2} + 1 & \frac{1}{4} - \frac{3}{4} + \frac{1}{2} & -\frac{1}{4} -\frac{1}{4} + \frac{1}{2}\\
+    1 + -1 & \frac{3}{2} - \frac{1}{2} & \frac{1}{2} - \frac{1}{2}\\
+    -1 + 1 & -\frac{1}{2} + \frac{1}{2} & \frac{1}{2} + \frac{1}{2}
+\end{array}
+\right)
+=
+\left(
+    \begin{array}{c c c}
+        1 & 0 & 0\\
+        0 & 1 & 0\\
+        0 & 0 & 1
+    \end{array}
+\right)
+\end{align*}
+\section{Dcv. 3}
+\subsection{a)}
+Neplatí pokud A = 
+$
+\begin{bmatrix}
+    1 & 0 \\
+    0 & 1
+\end{bmatrix}
+$,$ B =
+\begin{bmatrix}
+    -1 & 0 \\
+    0 & -1
+\end{bmatrix}
+$,$ A+B=
+\begin{bmatrix}
+    0 & 0\\
+    0 & 0
+\end{bmatrix}$
+.Matice A,B jsou regulární, ale A+B není.
+\subsection{b)}
+Z definice symetrické matice $A=A^{T}$.
+A je regulární existuje tedy $A^{-1}$.
+Proto platí:
+\begin{equation}
+    A*A^{-1}=I_n
+\end{equation}
+Transpozice nemění rovnost(pouze přeuspořádáme prvky).
+Tranponujeme tedy rovnost.
+\begin{align*}
+    (A*A^{-1})^T&=(I_n)^T\\
+    (A^{-1})^T * A^T &=I_n \text{| viz přednáška}\\
+    (A^{-1})^T * A &=I_n \text{| symetrie}
+\end{align*}
+To znammená, že $(A^{-1})^T$ je inverzní k $A$.
+Protože inverze k regularní matici existuje právě jedna, platí $(A^{-1})^T = A^{-1}$.
+Tedy inverzní matice $A^{-1}$ je symetrická.
+\end{document}

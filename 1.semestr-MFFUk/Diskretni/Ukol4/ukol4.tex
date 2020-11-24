@@ -1,0 +1,40 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[czech]{babel}
+\usepackage{amsmath, amssymb}
+
+
+% figure support
+\usepackage{import}
+\usepackage{xifthen}
+\pdfminorversion=7
+\usepackage{pdfpages}
+\usepackage{transparent}
+\newcommand{\incfig}[1]{%
+    \def\svgwidth{\columnwidth}
+    \import{./figures/}{#1.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+\author{Hynek Kydlicek}
+\title{}
+\begin{document}
+\maketitle
+\section{Příklad 1}
+Označme si množiny $\{1\ldots 10\} = M, \{11 \ldots 20\} = N$
+Uvědomíme si, že v Hassově diagramu vypadá lineární uspořádání jako "had". Prvky jsou seřazeny nad sebou, protože každý prvek je porovntelný s každým dalším, a tak se nám nemůže stát, že by se nám graf roztrhl na 2 řetězce.
+Prvky v hasově diagramu si označíme $\{1\cdots20\} = P$. 1 značí nejmenší prvek v Hass. diagramu, 2 druhý nejmenší až 20 největší.
+Nyní musíme najít bijektivní funkci z $M\cup N \to  P$, abychom definovali uspořádání $\preceq$
+\\
+Protože musí být prvky z N v $\preceq$ uspořádáné ostrou nerovností, stačí pouze vybrat 10 krát různá $a_i \in P$, na které se $N$ zobrazí.
+Nejmenšímu vybranému prvku $a_i$ přířadíme 1, největšímu 10. Obdobně pro $M$.
+Zároveň si uvědomíme, že pokud zobrazíme množinu $N$ bude zobrazení množiny $M$ jednoznačně určeno (vybíráme 10 prvků z 10).
+Tedy dostáváme, že abychom definovali zobrazení z $M \cup N \to  P$, musíme vybrat $|N| =10$ prvků z $|P| = 20$ a nezáleží na pořadí. 10 z 20 můžeme vybrat $\binom{20}{10}$ způsoby, tedy existuje přesně tolik monžností jak lineární uspořádání $\preceq$ zadefinovat.
+
+\section{Příklad 2}
+$\binom{n}{m}\binom{m}{r}$, říká vyber $m$ prvků z $n$ a z těchto prvků vyber $r$. To je to stejné, jako nejprve vybrat $r$ prvků z $n$ a tyto prvky doplnit $m-r$ prvky ze zbývajících v $n = (n-r)$, abychom dostali vybranou $m$ prvkou množinu jako v předchozím případě = $\binom{n}{r}\binom{n-r}{m-r}$
+
+\end{document}

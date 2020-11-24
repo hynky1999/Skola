@@ -1,0 +1,34 @@
+:root {
+    --black: #04214f;
+    --grey: #6a748a;
+    --blue1: #20497a;
+    --blue2: #bccee3;
+    --brown: #5e4d09;
+}
+
+body {
+    display: grid;
+    grid-template-areas:
+    "header header"
+    "sidebar content"
+    "footer footer";
+    grid-template-columns: 18em 1fr;
+    grid-gap: 2em;
+    margin: 5em 2.5em 2.5em 2.5em;
+}
+
+body > aside {
+    grid-area: sidebar;
+}
+
+body > main{
+    grid-area: content;
+}
+body > header{
+    grid-area: header;
+
+}
+body > footer{
+    grid-area: footer;
+    text-align: right;
+}

@@ -1,0 +1,35 @@
+:root {
+    --black: #04214f;
+    --grey: #6a748a;
+    --blue1: #20497a;
+    --blue2: #bccee3;
+    --brown: #5e4d09;
+}
+main *{
+    font-family: 'Source Sans Pro', sans-serif;
+    color: var(--black);
+    margin: 0;
+}
+
+.article-prev{
+    padding: 1em;
+    text-decoration: none;
+    display: block;
+    margin: 0.5em 0 0.5em 0;
+    transition: opacity 0.2s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.article-info h3{
+    font-size: 1em;
+    font-weight: normal;
+}
+
+.article-prev:hover{
+    background-color: var(--blue2);
+    opacity: 0.7;
+}
+
+main .article-list-header{
+    text-align: center;
+    margin: 0 0 2.5em 0;
+}

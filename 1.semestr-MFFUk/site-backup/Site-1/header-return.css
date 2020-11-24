@@ -1,0 +1,32 @@
+:root {
+    --black: #04214f;
+    --grey: #6a748a;
+    --blue1: #20497a;
+    --blue2: #bccee3;
+    --brown: #5e4d09;
+}
+
+body > header *{
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+    color: var(--black);
+}
+body > header{
+    margin: 0 0 2.5em 0;
+}
+body > header a{
+    padding: 0.1em;
+    text-decoration: none;
+}
+
+body > header #header-flex{
+    display: flex;
+    justify-content: space-between;
+}
+body > header #header-flex #header-return{
+    flex: 1;
+}
+body > header #header-date{
+    flex: 1;
+    text-align: right;
+}

@@ -1,0 +1,35 @@
+\documentclass{article}
+\usepackage{amsmath}
+\begin{document}
+\section*{Příklad 1}%
+\label{sec:Dcv. 1}
+\begin{enumerate}
+    \item{$4A$} \\[15]
+    \begin{pmatrix}
+        4 & 8 & 0 & -4\\
+        0 & 1 & 4 & 4\\
+        8 & 4 & -8 & 16
+    \end{pmatrix}
+\item{$A+B$} \\[15]
+    \begin{pmatrix}
+        3 & 6 & 1 & 
+    \end{pmatrix}
+\end{enumerate}
+
+
+\section*{Příklad 2}%
+\label{sub:Příklad}
+Na začatek je dobré říci, že $A^{m,n_1} * B^{n_2,l} = C^{m,l}$, pokud $n_1 \ne n_2$ součin není definován.
+Matice je možno sčítát pouze pokud mají stejné rozměry.\\[4]
+$B \in \mathbb{R}^{k,.}$, aby byl vůbec mezi maticemi $A$ a $B$ definován součin.\\
+$B \in \mathbb{R}^{k,l}$, aby pro výsledný součin $A*B$ byl definován součet s $C$.\\
+$A \in \mathbb{R}^{m,k}$, aby byl mezi výrazem $(A*B + C)$ = $\mathbb{R}^{A_{#řádků},l}$ a maticí $E$ definován součin.\\
+$C \in \mathbb{R}^{m,l}$, viz řádek nad.\\
+$E \in \mathbb{R}^{n,m}$, aby byl mezi výrazem $E*(A*B + C)$ = $\mathbb{R}^{E_{#řádků},l}$ a maticí $D$ definován součet.\\
+$D \in \mathbb{R}^{n,l}$, viz řádek nad.\\
+$F \in \mathbb{R}^{n,l}$, protože matice $F$ musí mít stejné rozměry jako $D$(Součet matic nemění jejich rozměry).
+
+\section*{Příklad 3}%
+\label{sec:Příklad}
+$A \in \mathbb{R}^{m,n}$ A_{i,j}, kde $i \in m$ a $j \in n$
+\end{document}

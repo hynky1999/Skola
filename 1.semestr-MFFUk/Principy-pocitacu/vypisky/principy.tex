@@ -1,0 +1,76 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[czech]{babel}
+\usepackage{amsmath, amsthm, amssymb}
+
+
+% figure support
+\usepackage{import}
+\usepackage{xifthen}
+\pdfminorversion=7
+\usepackage{pdfpages}
+\usepackage{transparent}
+\newcommand{\incfig}[1]{%
+    \def\svgwidth{\columnwidth}
+    \import{./figures/}{#1.pdf_tex}
+}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definice}[section]
+
+\pdfsuppresswarningpagegroup=1
+\author{Hynek Kydlicek}
+\title{Principy počitáčů}
+\begin{document}
+\maketitle
+\section{6. Přednáška}
+\subsection{Paměti}
+% Paměť je posloupnost bytů pro ukládání dat.
+
+% Jednotlivé byty je třeba adresovat.
+\begin{definition}[Adresový prostor]
+    Adresový prostor definuje, kolika byty můžeme adresovat.
+    Adresový prostor $\neq $ kapacity paměti, všechny adresy totiž nemusejí být využité
+\end{definition}
+\begin{definition}[Slovo, en:WORD]
+    Slovo v informatice znamená přenosovou jednotku paměti.
+    Tedy kolik bytů můžeme přenést jednou transakcí.
+    V pejorativním významu můžeme slovo brát jako označení pamětového bloku o velikosti 2B.
+    \\
+    DWORD můžeme brát jako označení pro 3B bloku.
+    \\
+    QWORD jako 4B bloku.
+\end{definition}
+
+\subsection{Jednotky SI a jiné}%
+Co znamená 1 KB ?
+\begin{enumerate}
+    \item $1000B$ (dle výrobců disků, je to méně)
+    \item $1024B$ = $2^{10}B$ standard
+\end{enumerate}
+Důsledek = zavedení nové jednotky $KiB = 1024B$, moc se ale neuživá.
+\\
+Podobně pro další jednotky.
+\begin{enumerate}
+    \item MB = $1024KB = 2^20B$
+    \item GB = $1024MB = 2^30B$
+\end{enumerate}
+\subsection{SRAM vs DRAM}%
+\begin{definition}[RAM, RANDOM ACCESS MEMORY]
+    RAM je paměť, pro kterou platí, že přístup na každý prvek trvá stejně rychle.
+    Není úplně pravda díky cache v procesoru je sekvenční přístup rychlejší.
+\end{definition}
+\begin{definition}[Volatile Memory]
+    Volatile memory je paměť, která udrží data pouze pokud je připojena k elektřině.
+    Po vypnutí ztrácí veškerý svůj obsah.
+\end{definition}
+
+\begin{center}
+\begin{tabular}{c c}
+    SRAM & DRAM\\
+    1 & 2
+\end{tabular}
+\end{center}
+\end{document}

@@ -1,0 +1,30 @@
+2)
+8-bitová rotace: 00101110 ROL 5 -> 11000101
+8-bitová rotace: 00101110 ROL 8 -> 00101110
+8-bitová rotace: 0x1C ROL 4 -> 0xC1
+32-bitová rotace: 0x84ACFF09 ROL 8 -> 0xACFF0984
+8-bitová rotace: 10101110 ROR 3 -> 11010101
+8-bitová rotace: 10101110 ROR 7 -> 01011101
+32-bitová rotace: 0x84ACFF09 ROR 12 -> 0xF0984ACF
+
+3)
+10 -> a) 00001010, b) 00001010 c) 00001010
+0 -> a) 00000000 nebo 10000000 b) 11111111 nebo 00000000 c) 00000000
+-3 -> a) 10000011 b) 11111100 c) 11111101
+-5 -> a) 10000101 b) 11111010 c) 11111011
+-124 -> a) 11111100 b) 10000011 c) 10000100
+
+
+8)
+a): cislo = 5 -> 5, int
+b): cislo = 256 -> 256, int
+c): cislo = 0x4FE -> 1278, int
+
+d): cislo = 251
+cislo = uint8(cislo) -> 251, numpy.uint8
+
+e): cislo = 256
+cislo = uint8(cislo) -> 0, numpy.uint8
+
+f): cislo = 0x4FE
+cislo = uint8(cislo) -> 254, numpy.uint8

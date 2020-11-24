@@ -1,0 +1,30 @@
+src/DirectoryIterator.o: src/DirectoryIterator.cpp src/DirectoryIterator.h \
+ src/File.h src/Directory.h
+src/Relation.o: src/Relation.cpp src/Relation.h src/Expression.h src/File.h \
+ src/Query.h src/Constants.hpp src/Atom.h src/RegularFile.h
+src/Index.o: src/Index.cpp src/Index.h src/File.h src/Directory.h \
+ src/DirectoryIterator.h src/Expression.h src/Constants.hpp
+src/OperativeFile.o: src/OperativeFile.cpp src/OperativeFile.h src/File.h \
+ src/SaveUtilities.h src/Constants.hpp
+src/Atom.o: src/Atom.cpp src/Atom.h src/Expression.h src/File.h \
+ src/Constants.hpp
+src/File.o: src/File.cpp src/File.h src/Directory.h src/DirectoryIterator.h \
+ src/OperativeFile.h src/RegularFile.h src/SaveUtilities.h \
+ src/Constants.hpp
+src/RegularFile.o: src/RegularFile.cpp src/RegularFile.h src/File.h \
+ src/Constants.hpp src/SaveUtilities.h src/PngInputCallback.h
+src/Directory.o: src/Directory.cpp src/Directory.h src/File.h \
+ src/DirectoryIterator.h src/SaveUtilities.h src/Constants.hpp
+src/SaveUtilities.o: src/SaveUtilities.cpp src/SaveUtilities.h \
+ src/Constants.hpp
+src/PngInputCallback.o: src/PngInputCallback.cpp src/PngInputCallback.h
+src/LogicOperator.o: src/LogicOperator.cpp src/LogicOperator.h \
+ src/Expression.h src/File.h
+src/main.o: src/main.cpp src/Index.h src/File.h src/Directory.h \
+ src/DirectoryIterator.h src/Expression.h src/ExprParser.h \
+ src/Constants.hpp
+src/Query.o: src/Query.cpp src/Query.h src/Expression.h src/File.h \
+ src/Constants.hpp src/Atom.h src/RegularFile.h
+src/ExprParser.o: src/ExprParser.cpp src/RegularFile.h src/File.h \
+ src/ExprParser.h src/Expression.h src/Atom.h src/Query.h \
+ src/Constants.hpp src/Relation.h src/LogicOperator.h

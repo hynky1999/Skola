@@ -1,0 +1,18 @@
+\documentclass{article}
+\title{Diskretka 2}
+\begin{document}
+\maketitle
+\section{Definice}
+Nejprve si zadefingujeme inverzi pro relaci R na množině X.\\
+$R^{-1} = \{(y,x) | (x,y) \in R\}$\\
+\subsection{Reflexivita}
+Pro každě $x$ z $X$ dokážeme, že platí $xR^{-1}x$. Kdy platí $xR^{-1}x$ ? Právě tehdy, když $xRx$. Protože $\{(x,x) | (x,x) \in R\}$. $R$ je reflexivní \rightarrow $(\forall x \in X) (xRx)$. A tedy i $(\forall x \in X)( xR^{-1}x)$. Tím je tvrzení dokázáno.
+\subsection{Symetrie}
+Pro každě $x,y$ z $X$ dokážeme, že platí $xR^{-1}y \wedge yR^{-1}x$. Kdy platí $xR^{-1}y$ ? Právě tehdy, když $yRx$. Protože $\{(x,y) | (y,x) \in R\}$. Díky symetrii R platí i $xRy$. A tedy i $yR^{-1}x$. Tím je tvrzení dokázáno.
+
+\subsection{Tranzitivita}
+Pro každě $x,y,z$ z $X$ dokážeme, že platí $(xR^{-1}y \wedge yR^{-1}z) \rightarrow xR^{-1}z$. Kdy platí $xR^{-1}y$ ? Právě tehdy, když $yRx$. Kdy platí $yR^{-1}z$ ? Právě tehdy, když $zRy$. Díky tranzitivitě R platí i $zRx$. A tedy i $xR^{-1}z$. Tím je tvrzení dokázáno.
+
+\subsection{Antisymetrie}
+Pro každě $x,y$ z $X$ dokážeme, že platí $(xR^{-1}y \wedge yR^{-1}x) \rightarrow x = y$. Kdy platí $xR^{-1}y$ ? Právě tehdy, když $yRx$. Kdy platí $yR^{-1}x$ ? Právě tehdy, když $xRy$. Díky antireflexivitě R platí $x = y$. Tím je tvrzení dokázáno.
+\end{document}

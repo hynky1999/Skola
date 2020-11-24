@@ -1,0 +1,563 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.10.18)  18 OCT 2020 17:16
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**du-3.tex
+(./du-3.tex
+LaTeX2e <2018-12-01>
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
+)
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2018/12/01 v2.17b AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+ (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks14
+\ex@=\dimen103
+)) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen104
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count88
+LaTeX Info: Redefining \frac on input line 223.
+\uproot@=\count89
+\leftroot@=\count90
+LaTeX Info: Redefining \overline on input line 385.
+\classnum@=\count91
+\DOTSCASE@=\count92
+LaTeX Info: Redefining \ldots on input line 482.
+LaTeX Info: Redefining \dots on input line 485.
+LaTeX Info: Redefining \cdots on input line 606.
+\Mathstrutbox@=\box27
+\strutbox@=\box28
+\big@size=\dimen105
+LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
+\macc@depth=\count93
+\c@MaxMatrixCols=\count94
+\dotsspace@=\muskip10
+\c@parentequation=\count95
+\dspbrk@lvl=\count96
+\tag@help=\toks15
+\row@=\count97
+\column@=\count98
+\maxfields@=\count99
+\andhelp@=\toks16
+\eqnshift@=\dimen106
+\alignsep@=\dimen107
+\tagshift@=\dimen108
+\tagwidth@=\dimen109
+\totwidth@=\dimen110
+\lineht@=\dimen111
+\@envbody=\toks17
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks18
+LaTeX Info: Redefining \[ on input line 2844.
+LaTeX Info: Redefining \] on input line 2845.
+) (./du-3.aux
+./du-3.aux:3: Missing \endcsname inserted.
+<to be read again> 
+                   \unhbox 
+l.3 ...el{sub:P\IeC {\v r}\IeC {\'\i }klad}{{}{1}}
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./du-3.aux:3: Missing \endcsname inserted.
+<to be read again> 
+                   \unhbox 
+l.3 ...el{sub:P\IeC {\v r}\IeC {\'\i }klad}{{}{1}}
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+
+./du-3.aux:3: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 ...el{sub:P\IeC {\v r}\IeC {\'\i }klad}{{}{1}}
+                                                  
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./du-3.aux:3: Missing number, treated as zero.
+<to be read again> 
+                   \accent@spacefactor 
+l.3 ...el{sub:P\IeC {\v r}\IeC {\'\i }klad}{{}{1}}
+                                                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./du-3.aux:3: Bad space factor (0).
+<to be read again> 
+                   \accent@spacefactor 
+l.3 ...el{sub:P\IeC {\v r}\IeC {\'\i }klad}{{}{1}}
+                                                  
+I allow only values in the range 1..32767 here.
+
+./du-3.aux:3: Extra \endcsname.
+\@namedef ...xpandafter \def \csname #1\endcsname 
+                                                  
+l.3 ...el{sub:P\IeC {\v r}\IeC {\'\i }klad}{{}{1}}
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
+./du-3.aux:3: Extra }, or forgotten \endgroup.
+\@newl@bel ...ined}}\global \@namedef {#1@#2}{#3}}
+                                                  
+l.3 ...el{sub:P\IeC {\v r}\IeC {\'\i }klad}{{}{1}}
+                                                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./du-3.aux:4: Missing \endcsname inserted.
+<to be read again> 
+                   \unhbox 
+l.4 ...el{sec:P\IeC {\v r}\IeC {\'\i }klad}{{}{1}}
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./du-3.aux:4: Missing \endcsname inserted.
+<to be read again> 
+                   \unhbox 
+l.4 ...el{sec:P\IeC {\v r}\IeC {\'\i }klad}{{}{1}}
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./du-3.aux:4: Extra \endcsname.
+\@namedef ...xpandafter \def \csname #1\endcsname 
+                                                  
+l.4 ...el{sec:P\IeC {\v r}\IeC {\'\i }klad}{{}{1}}
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
+./du-3.aux:4: Extra }, or forgotten \endgroup.
+\@newl@bel ...ined}}\global \@namedef {#1@#2}{#3}}
+                                                  
+l.4 ...el{sec:P\IeC {\v r}\IeC {\'\i }klad}{{}{1}}
+                                                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+)
+\openout1 = `du-3.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+
+./du-3.tex:7: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   }
+l.7     \item{$4A$} \\[15]
+                          
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+./du-3.tex:8: Missing $ inserted.
+<inserted text> 
+                $
+l.8     \begin{pmatrix}
+                       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./du-3.tex:12: Missing $ inserted.
+<inserted text> 
+                $
+l.12     \end{pmatrix}
+                      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./du-3.tex:13: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   }
+l.13 \item{$A+B$} \\[15]
+                        
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+./du-3.tex:14: Missing $ inserted.
+<inserted text> 
+                $
+l.14     \begin{pmatrix}
+                        
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./du-3.tex:16: Missing $ inserted.
+<inserted text> 
+                $
+l.16     \end{pmatrix}
+                      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./du-3.tex:23: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   }
+l.23 ...t pouze pokud mají stejné rozměry.\\[4]
+                                                  
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+./du-3.tex:24: Undefined control sequence.
+l.24 $B \in \mathbb
+                   {R}^{k,.}$, aby byl vůbec mezi maticemi $A$ a $B$ defino...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./du-3.tex:25: Undefined control sequence.
+l.25 $B \in \mathbb
+                   {R}^{k,l}$, aby pro výsledný součin $A*B$ byl definov�...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./du-3.tex:26: Undefined control sequence.
+l.26 $A \in \mathbb
+                   {R}^{m,k}$, aby byl mezi výrazem $(A*B + C)$ = $\mathbb{...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./du-3.tex:26: Undefined control sequence.
+<recently read> \mathbb 
+                        
+l.26 ...y byl mezi výrazem $(A*B + C)$ = $\mathbb
+                                                  {R}^{A_{#řádků},l}$ a m...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./du-3.tex:26: You can't use `macro parameter character #' in math mode.
+l.26 ...i výrazem $(A*B + C)$ = $\mathbb{R}^{A_{#
+                                                  řádků},l}$ a maticí $E...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+LaTeX Warning: Command \v invalid in math mode on input line 26.
+
+./du-3.tex:26: Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.26 ...výrazem $(A*B + C)$ = $\mathbb{R}^{A_{#ř
+                                                  ádků},l}$ a maticí $E$ ...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+./du-3.tex:26: You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.26 ...výrazem $(A*B + C)$ = $\mathbb{R}^{A_{#ř
+                                                  ádků},l}$ a maticí $E$ ...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 26.
+
+./du-3.tex:26: Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.26 ...�razem $(A*B + C)$ = $\mathbb{R}^{A_{#řá
+                                                  dků},l}$ a maticí $E$ de...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+./du-3.tex:26: You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.26 ...�razem $(A*B + C)$ = $\mathbb{R}^{A_{#řá
+                                                  dků},l}$ a maticí $E$ de...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+LaTeX Warning: Command \r invalid in math mode on input line 26.
+
+./du-3.tex:26: Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.26 ...em $(A*B + C)$ = $\mathbb{R}^{A_{#řádků
+                                                  },l}$ a maticí $E$ defino...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+./du-3.tex:26: You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.26 ...em $(A*B + C)$ = $\mathbb{R}^{A_{#řádků
+                                                  },l}$ a maticí $E$ defino...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Missing character: There is no � in font cmex7!
+Missing character: There is no � in font cmex7!
+Missing character: There is no � in font cmex7!
+./du-3.tex:27: Undefined control sequence.
+l.27 $C \in \mathbb
+                   {R}^{m,l}$, viz řádek nad.\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./du-3.tex:28: Undefined control sequence.
+l.28 $E \in \mathbb
+                   {R}^{n,m}$, aby byl mezi výrazem $E*(A*B + C)$ = $\mathb...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./du-3.tex:28: Undefined control sequence.
+<recently read> \mathbb 
+                        
+l.28 ...byl mezi výrazem $E*(A*B + C)$ = $\mathbb
+                                                  {R}^{E_{#řádků},l}$ a m...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./du-3.tex:28: You can't use `macro parameter character #' in math mode.
+l.28 ...výrazem $E*(A*B + C)$ = $\mathbb{R}^{E_{#
+                                                  řádků},l}$ a maticí $D...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+LaTeX Warning: Command \v invalid in math mode on input line 28.
+
+./du-3.tex:28: Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.28 ...�razem $E*(A*B + C)$ = $\mathbb{R}^{E_{#ř
+                                                  ádků},l}$ a maticí $D$ ...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+./du-3.tex:28: You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.28 ...�razem $E*(A*B + C)$ = $\mathbb{R}^{E_{#ř
+                                                  ádků},l}$ a maticí $D$ ...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 28.
+
+./du-3.tex:28: Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.28 ...azem $E*(A*B + C)$ = $\mathbb{R}^{E_{#řá
+                                                  dků},l}$ a maticí $D$ de...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+./du-3.tex:28: You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.28 ...azem $E*(A*B + C)$ = $\mathbb{R}^{E_{#řá
+                                                  dků},l}$ a maticí $D$ de...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+LaTeX Warning: Command \r invalid in math mode on input line 28.
+
+./du-3.tex:28: Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.28 ... $E*(A*B + C)$ = $\mathbb{R}^{E_{#řádků
+                                                  },l}$ a maticí $D$ defino...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+./du-3.tex:28: You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.28 ... $E*(A*B + C)$ = $\mathbb{R}^{E_{#řádků
+                                                  },l}$ a maticí $D$ defino...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Missing character: There is no � in font cmex7!
+Missing character: There is no � in font cmex7!
+Missing character: There is no � in font cmex7!
+./du-3.tex:29: Undefined control sequence.
+l.29 $D \in \mathbb
+                   {R}^{n,l}$, viz řádek nad.\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./du-3.tex:30: Undefined control sequence.
+l.30 $F \in \mathbb
+                   {R}^{n,l}$, protože matice $F$ musí mít stejné rozmě...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./du-3.tex:34: Undefined control sequence.
+l.34 $A \in \mathbb
+                   {R}^{m,n}$ A_{i,j}, kde $i \in m$ a $j \in n$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./du-3.tex:34: Missing $ inserted.
+<inserted text> 
+                $
+l.34 $A \in \mathbb{R}^{m,n}$ A_
+                                {i,j}, kde $i \in m$ a $j \in n$
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./du-3.tex:34: Missing $ inserted.
+<inserted text> 
+                $
+l.34 $A \in \mathbb{R}^{m,n}$ A_{i,j}, kde $i \in
+                                                  m$ a $j \in n$
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+[1
+
+{/usr/share/texlive/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}] (./du-3.aux
+./du-3.aux:3: Missing \endcsname inserted.
+<to be read again> 
+                   \unhbox 
+l.3 ...el{sub:P\IeC {\v r}\IeC {\'\i }klad}{{}{1}}
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./du-3.aux:4: Missing \endcsname inserted.
+<to be read again> 
+                   \unhbox 
+l.4 ...el{sec:P\IeC {\v r}\IeC {\'\i }klad}{{}{1}}
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 830 strings out of 494553
+ 9216 string characters out of 6177317
+ 69278 words of memory out of 5000000
+ 4566 multiletter control sequences out of 15000+600000
+ 4699 words of font info for 18 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 27i,8n,21p,216b,154s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on du-3.pdf (1 page, 86909 bytes).
+PDF statistics:
+ 44 PDF objects out of 1000 (max. 8388607)
+ 31 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

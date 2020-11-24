@@ -1,0 +1,48 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[czech]{babel}
+\usepackage{amsmath, amssymb, amsthm}
+
+
+% figure support
+\usepackage{import}
+\usepackage{xifthen}
+\pdfminorversion=7
+\usepackage{pdfpages}
+\usepackage{transparent}
+\newcommand{\incfig}[1]{%
+    \def\svgwidth{\columnwidth}
+    \import{./figures/}{#1.pdf_tex}
+}
+
+\newtheorem{theorem}{Věta}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\swapnumbers
+\theoremstyle{definition}
+\newtheorem{definition}{Definice}[section]
+
+\pdfsuppresswarningpagegroup=1
+\author{Hynek Kydlicek}
+\title{Diskrétka}
+\begin{document}
+\maketitle
+\section{Grafy}
+\begin{definition}[Eulerovský tah]
+    Tah, který vede přes všechny hrany grafu právě jednou.
+\end{definition}
+\begin{definition}[Eulerovský graf]
+    Graf je eulerovský $\iff$ existuje v něm uzavřený eulerovský tah.
+\end{definition}
+\begin{theorem}[Alternativní definice eulerovské grafu]
+    Graf je eulerovský $\iff$ graf je souvislý a stupeň každého vrcholu je sudý.
+\end{theorem}
+\begin{figure}[ht]
+    \centering
+    \incfig{ahoj}
+    \caption{ahoj}
+    \label{fig:ahoj}
+\end{figure}
+\end{document}
