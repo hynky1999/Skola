@@ -1,0 +1,70 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[czech]{babel}
+\usepackage{amsmath, amssymb}
+
+
+% figure support
+\usepackage{import}
+\usepackage{xifthen}
+\pdfminorversion=7
+\usepackage{pdfpages}
+\usepackage{transparent}
+\newcommand{\incfig}[2][1]{%
+    \def\svgwidth{#1\columnwidth}
+    \import{./figures/}{#2.pdf_tex}
+}
+\title{Pošta}
+\author{Hynek Kydlíček}
+\pdfsuppresswarningpagegroup=1
+
+
+\begin{document}
+\maketitle
+Město bude rozděleno na disjunktní okresy o velikosti 4*4 = 16 měst.
+Tedy každý okres je tvořena čtvercem.
+Dohromady se tak město rozdělí na $\frac{32}{4} * \frac{32}{4} = 64$ okresů.
+Každý okres bude obsluhovat jedno auto. 
+Nazvěme tyto auto auta-2v, kde 2v značí druhou vrstvu.
+Auta jezdící pouze v okresech nazvěme auta-1v.
+Obsluha okresů vypadá následnovně:
+\begin{enumerate}
+    \item Auto-1v musí projet všechna města ve svém okrese = 16 měst.
+        V každém městě auto-v1 sebere a vyloží dopisy to mu zabere 15 minut, tedy jeden celý okruh(přes věchna města) zabere: $15*6 + 16*15 = 330 $ minut.
+    \item Auto-2v pro daný okres čeká, než auto-1v dojede svou trasu, jakmile auto-1v dojede na začátek své trasy předá dopisy z jiných částí autu-2v $= 15$ min.
+    \item Auto-2v odjíždí do centrálního hubu = město se souřadnicemi $(16, 16)$(číslováno od 1). V centrálnímu hubu se setká se všemi ostatními auty-2v, kterým předá dopisy do jejich okresů a sám přijme dopisy ze svého. Tento úkon trvá autům-2v rozdílný čas, dle vzdálenosti od hubu. Každý okres proto jako svůj startovní bod(začátek a konec trasy aut-v1) volí nejbližší město k hubu. Nejhorší připad nastává pro auto-2v okresu s městěm $(32, 32)$, jelikož auto-v1 začíná a končí okruh ve městě $(29, 29)$, trvá autu-v2 tento úkon $= (29-16)*6 + 15 + (29-16)*6 = 171$ minut(cesta do hubu + předání + cesta do okresu). Jelikož každému autu-v2 trvá jiný čas dojet do hubu, je třeba, aby ostatní auta v hubu počkala, než dorazí všechna auta. První setkání v hubu nastává $330 + 15 + 78 = 423$ minut po startu.
+        Poté každých $330 + 15 + 78 = 423$ minut.
+    \item   Po předání dopisů z jiných okresů autům-v2(před cesotu do hubu), auta-v1 okamžitě vyrážejí na další okruh. Jelikož je okruh delší než cesta aut-v2 do hubu a zpět, musí auta-v2 po příjezdu z hubu čekat, než auta-v1 dokonají okruh.
+\end{enumerate}
+
+\textbf{Jaký je tedy nejhorší čas pro doručení dopisu ?} 
+Nejhorší případ nastává, pokud auto-v1 vyrazí ze startovního města a ihned po opuštení chce někdo poslat dopis do jiného okresu. Jelikož okruh aut-v2 je kratší než okruh aut-v1, není podstatné jak vzdálené okresy jsou.
+Pojďme si tedy projít časovou osu takového dopisu.
+
+\begin{enumerate}
+    \item Odesílatel dává dopis na poštu v moment, kdy auto-v1 začíná dopisy v počátečním městě vybírat. Tedy daný dopis nevezme.
+    \item Auto-v1 vykoná svůj okruh a je zpět v počátečním městě, zde předává dopisy autu-v2. Uběhlých minut: $330 + 15 = 345$.
+    \item Auto-v1 vykonává další okruh a konečně nabírá označený dopis, který sebere a po dokončení okruhu ho předává autu-v2. Uběhlých minut: $345 + 330 + 15 = 690$.
+
+    \item Auto-v2 dojede do hubu, zde se setká s autem-v2 z okresu, do kterého je třeba dopis doručit. Autu daný dopis předá. Nový majitel dopisu, dopis odváží do svého okresu. Zde čeká než auto-v1 v daném okresu dojede svůj okruh. Jelikož cesta aut-v2 do hubu a zpět do svého okresu je kratší než jeden okruh auta-v1, uplynulý čas můžeme brát jako čas okruhu auta-v1. Uplynulý čas: $690 + 330 = 1010$.
+    \item Auto-v1 přebíra označený dopis a rozváží ho spolu s ostatními po okrese. Nejhorší případ je, pokud je adresát dopisu v posledním městě na cestě = město 32. Uběhlých minut: $1010 + 15 + 324 = 1349$.
+    \item Adresát si vybírá po 15 minutách dopis. Uběhlých minut: $1349 + 15 = 1364$
+
+\end{enumerate}
+V nejhorším případě tak trvá doručit dopis $1364 \ \text{minut} = 22.73 $ hodin.
+Dopis se tedy stihne doručit včas.
+
+Dohromady potřebujeme $64*2 = 128$ aut(Pro každý okres 2(auto-v1 + auto-v2)).
+Je zde určitě prostor pro zlepšení v druhé vrstvě. Nejspíš by šlo zařídit, aby auta-v2 vybírala z více okresů místo pouze jednoho. Takovéto zlepšení by však nejspíš bylo pouze v řádu jednotek aut.
+
+\begin{figure}[ht]
+    \centering
+    \incfig{rozdeleni}
+    \caption{Mapa Auta-v1 projíždející okresem}
+    \label{fig:rozdeleni}
+\end{figure}
+    
+\end{document}

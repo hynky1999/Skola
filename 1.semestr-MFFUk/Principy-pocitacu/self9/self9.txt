@@ -1,0 +1,51 @@
+7)
+    V Pythonu musíme vždy přičíst overhead. Ten se skládá počítaných referencí(4B) + počet platných bitů(8B) + + indentifikace typu(4B) = 16B
+    512
+    Potřebujeme 9 bitů
+     ---> Python 32 bitů + overhead = 24B
+     ---> C# 16 bitů = 2B
+    ----------------------------------------------------------
+    16 000 000
+    Potřebujeme 23 bitů
+     ---> Python 32 bitů + overhead = 24B
+     ---> C# 32 bitů = 4B
+    ----------------------------------------------------------
+    4 000 000 000
+    Potřebujeme 31 bitů
+     ---> Python 32 bitů + overhead = 24B
+     ---> C# 32 bitů = 4B
+    ----------------------------------------------------------
+    64 000 000 000
+    Potřebujeme 35 bitů
+     ---> Python 64 bitů + overhead = 28B
+     ---> C# 64 bitů = 8B
+    ----------------------------------------------------------
+    128
+    Potřebujeme 7 bitů
+     ---> Python 32 bitů + overhead(4B gargabge collect) = 24B
+     ---> C# 8 bitů = 1B
+    ----------------------------------------------------------
+    -128
+    Potřebujeme 8 bitů
+     ---> Python 32 bitů + overhead(4B gargabge collect) = 24B
+     ---> C# 8 bitů = 1B
+    ----------------------------------------------------------
+    -130
+    Potřebujeme 8 bitů
+     ---> Python 32 bitů + overhead(4B gargabge collect) = 24B
+     ---> C# 8 bitů = 1B
+
+13)
+    a) A << 8
+    b) B >> 5
+    c) Není přiočaře možné
+    d) C << 3 (musíme si dávat pozor na přetečení znaménka)
+    e) D >>> 4 (>>> je Aritmetický posun vpravo)
+14)
+    Oddělení | je zde pouze pro přehlednější zápis značí rozdélení "desetinné" časti
+    a) 0111 0|110
+    b) 1110|1100
+    c) 0100 0011 10|1010 00
+    d) Nelze zapsat není dost místa pro desetiny
+    e) 0111 1111 11|1000 00
+    f) 1111 1110|0000 0000

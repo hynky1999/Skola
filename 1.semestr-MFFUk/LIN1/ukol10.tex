@@ -1,0 +1,114 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[czech]{babel}
+\usepackage{amsmath, amssymb}
+
+
+% figure support
+\usepackage{import}
+\usepackage{xifthen}
+\pdfminorversion=7
+\usepackage{pdfpages}
+\usepackage{transparent}
+\newcommand{\incfig}[1]{%
+    \def\svgwidth{\columnwidth}
+    \import{./figures/}{#1.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+\begin{document}
+\begin{section}{Dcv. 1}
+    Matici upravíme do RREF tvaru, abychome našli názi $R(A)$ a $S(A)$.
+    \[
+        \begin{pmatrix} 1 && 2 && 3 \\
+                        -1 && 4 && 1 \\
+                        -1 && 1 && -1
+        \end{pmatrix}   
+        \sim
+        \begin{pmatrix} 1 && 2 && 3 \\
+                        0 && 6 && 4 \\
+                        0 && 3 && 2
+        \end{pmatrix}   
+        \sim
+        \begin{pmatrix} 1 && 2 && 3 \\
+                        0 && 6 && 4 \\
+                        0 && 0 && 0
+        \end{pmatrix}   
+    .\] 
+    Báze $R(A)$ je $\begin{pmatrix} 1 \\ 2 \\ 3\end{pmatrix}, \begin{pmatrix} 0 \\ 6 \\ 4 \end{pmatrix}$.\\
+            Báze $S(A)$ je $\begin{pmatrix} 1 \\ -1 \\ -1 \end{pmatrix}, \begin{pmatrix} 2 \\ 4 \\1 \end{pmatrix}$.
+            Abychom zjistil průnik ptáme se, kdy platí rovnice: \[
+            a*\begin{pmatrix} 1 \\ 2 \\ 3\end{pmatrix} + b*\begin{pmatrix} 0 \\ 6 \\ 4 \end{pmatrix} = c*\begin{pmatrix} 1 \\ -1 \\ -1 \end{pmatrix} + d*\begin{pmatrix} 2 \\ 4 \\1 \end{pmatrix}
+            .\] 
+            \[
+            \forall a,b,c,d \in R
+            .\] 
+            Odečteme pravou stranu od levé a přepíšeme do matice.
+            \begin{align*}
+                &\begin{pmatrix}
+                    1 & 0 & -1 & -2 & \bigm| & 0 \\
+                    2 & 6 & 1 & -4 & \bigm| & 0 \\
+                    3 & 4 & 1 & -1 & \bigm| & 0
+                \end{pmatrix}
+                \sim
+                \begin{pmatrix}
+                    1 & 0 & -1 & -2 & \bigm| & 0 \\
+                    0 & 6 & 3 & 0 & \bigm| & 0 \\
+                    0 & 4 & 4 & 5 & \bigm| & 0
+                \end{pmatrix}
+                \\
+                \sim
+                &\begin{pmatrix}
+                    1 & 0 & -1 & -2 & \bigm| & 0 \\
+                    0 & 6 & 3 & 0 & \bigm| & 0 \\
+                    0 & 0 & 12 & 30 & \bigm| & 0
+                \end{pmatrix}
+                \sim
+                \begin{pmatrix}
+                    1 & 0 & -1 & -2 & \bigm| & 0 \\
+                    0 & 2 & 1 & 0 & \bigm| & 0 \\
+                    0 & 0 & 2 & 5 & \bigm| & 0
+                \end{pmatrix}
+            \end{align*}
+            Řešením matice je \[
+                \begin{pmatrix} -\frac{d}{2} \\ \frac{5d}{4} \\ -\frac{5d}{2} \\ d  \end{pmatrix} 
+            .\] 
+            Dosadíme řešení do rovnice: \[
+                \frac{-d}{2}*\begin{pmatrix} 1 \\ 2 \\ 3\end{pmatrix} + \frac{5d}{4}*\begin{pmatrix} 0 \\ 6 \\ 4 \end{pmatrix} = \frac{-5d}{2}*\begin{pmatrix} 1 \\ -1 \\ -1 \end{pmatrix} + d*\begin{pmatrix} 2 \\ 4 \\1 \end{pmatrix}
+            .\] 
+            A upravíme(upravujeme pouze jednotlivé strany !!) \[
+                \frac{d}{2}*\begin{pmatrix} -1 \\ 13 \\ 7\end{pmatrix} = \frac{d}{2}*\begin{pmatrix} -1 \\ 13 \\ 7 \end{pmatrix}
+            .\] 
+            Kromě toho, že jsme si ověřili, že nám řešení vyšlo dobře, tak vidíme, že průnik musí být tvaru \[
+            x \in \left<\begin{pmatrix} -1 \\ 13 \\ 7 \end{pmatrix}\right> 
+            .\] 
+            Tedy tento vektor je bazí průniku(určitě je LN).
+\end{section}
+\begin{section}{Dcv. 2}
+    Z přednášky víme, že \[
+        rank(X) + dim(Ker(X)) = n
+    \] \[
+    dim(S(X)) = dim(R(X)) = dim(S(X^T)) = rank(X) \text{Pro X} \in R^{m,n}
+    .\]      První rovnost upravíme na
+    \[
+        dim(Ker(X)) = n - rank(X)
+    .\] 
+        Dosazením A za X dostáváme
+        \[
+            dim(Ker(A)) = n - rank(A)
+        .\] 
+        Dosazením $A^T$ za X dostáváme
+        \[
+            dim(Ker(A^T)) = n - rank(A^T) = n - S(A^T) = n - R(A) = n - rank(A)
+        .\] 
+        Spojením rovnic dostaneme
+        \[
+            dim(Ker(A)) = n - rank(A) = dim(Ker(A))
+        .\] 
+\end{section}
+
+\end{document}

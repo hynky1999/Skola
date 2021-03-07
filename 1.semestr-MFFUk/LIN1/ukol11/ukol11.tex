@@ -1,0 +1,72 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[czech]{babel}
+\usepackage{amsmath, amssymb}
+
+
+% figure support
+\usepackage{import}
+\usepackage{xifthen}
+\pdfminorversion=7
+\usepackage{pdfpages}
+\usepackage{transparent}
+\newcommand{\incfig}[1]{%
+    \def\svgwidth{\columnwidth}
+    \import{./figures/}{#1.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+\begin{document}
+    \begin{section}{Dcv. 1}
+        Ověříme z definice:
+        \begin{subsection}{Součet vektorů($f(x) + f(y) = f(x+y)$}
+            \[
+                x = (a,b), y = (c, d)
+            .\] 
+            a)
+            \begin{align*}
+                f(x+y) &=  f(a+c, b+d) = (a + c + 4b + 4d, 2a + 2c - b - d)\\ &= (a + 4b, 2a - b) + (c + 4d, 2c - d) = f(x) + f(y)
+            .\end{align*}
+            b)
+            \begin{align*}
+                f(x+y) &=  f(a+c, b+d) = ((a+c)*(b+d), 2b + 2d - a - c)\\ &= (ab + ad + cb + cd, 2b + 2d - a -c) \\ &= (ab, 2b -a) + (cd, 2d - c) + (ad + cd, 0) = f(x) + f(y) + (ad + cd, 0)
+            .\end{align*}
+            Zobrazení b) podmínku nesplňuje, protipřílad budiž $x = (1,1), y = (1,1)$.
+            \[
+                f(1,1) + f(1,1) = (2, 2) \neq (4,2) = f(2,2) = f((1,1) + (1,1))
+            .\] 
+            \begin{subsection}{Násobení vektorů($f(a*x)= a*f(x)$)}
+            \[
+                x = (a,b)
+            .\] 
+            a)
+            \begin{align*}
+                f(u*x) &= f(u*a, u*b) =  (u*a + u*4b, u*2a - u*b) = u*(a + 4b, 2a - b) = f(u)
+            .\end{align*}
+            Zobrazení a) splňuje obě podmínky, proto je lineární.
+            Zobrazení b) nesplňuje první, lineární není.
+        \end{subsection}
+    \end{section}
+    \begin{section}{Dcv. 2}
+        Pouze a) je lineární, najdeme jeho matici a obraz.
+        Zobrazíme si kanonickou bázi.
+        \[
+            f(1,0) = (1, 2),
+            f(0,1) = (4, -1)
+        .\] 
+        Jelikož souřadnice v kanonické bázi korespondují se samotnými vektory,
+        matice vzhledem ke kanonické bázi vypadá následovně:
+        \[
+            \begin{pmatrix} 1 && 4 \\ 2 && -1 \end{pmatrix} 
+        .\]
+        Nyní stačí vynásobit vektor $\begin{pmatrix} 2\\ 1 \end{pmatrix}$, abychom dostali jeho obraz:
+        \[
+            \begin{pmatrix} 1 && 4 \\ 2 && -1 \end{pmatrix} * \begin{pmatrix} 2\\ 1 \end{pmatrix} = \begin{pmatrix} 6 \\ 3 \end{pmatrix} 
+        .\] 
+        
+    \end{section}
+\end{document}

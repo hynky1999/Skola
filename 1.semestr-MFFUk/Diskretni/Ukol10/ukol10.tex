@@ -1,0 +1,52 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[czech]{babel}
+\usepackage{amsmath, amssymb}
+
+
+% figure support
+\usepackage{import}
+\usepackage{xifthen}
+\pdfminorversion=7
+\usepackage{pdfpages}
+\usepackage{transparent}
+\newcommand{\incfig}[1]{%
+    \def\svgwidth{\columnwidth}
+    \import{./figures/}{#1.pdf_tex}
+}
+\pdfsuppresswarningpagegroup=1
+\begin{document}
+\section{Úkol 1}
+Stačí ukázat jedno rovinné nakreslení.
+\begin{figure}[ht]
+    \centering
+    \incfig{rov-graf}
+    \caption{Nakreslení rov. grafu}
+    \label{fig:rov-graf}
+\end{figure}
+\section{Úkol 2}
+    \begin{subsection}{Důkaz dle Kurakowského věty}
+        Nalezneme dělení podgrafu $K_{3,3}$ viz \ref{fig:Kurakovského věta}. 
+        Zelená označuje jednu partitu, červená druhou partitu. Červené hrany v podgrafu zůstanou, černé ne.
+\begin{figure}[ht]
+    \centering
+    \incfig{kurakow}
+    \caption{Kurakowského věta}
+    \label{fig:Kurakovského věta}
+\end{figure}
+    \end{subsection}
+    \pagebreak
+    \begin{subsection}{Důkaz dle nerovinnosti $K_5$}
+        Stačí kontrahovat zelené hrany jako na obrázku \ref{fig:k5}.
+\begin{figure}[ht]
+    \centering
+    \incfig{k5}
+    \caption{Neorvinnost $K_5$}
+    \label{fig:k5}
+\end{figure}
+        
+    \end{subsection}
+\end{document}

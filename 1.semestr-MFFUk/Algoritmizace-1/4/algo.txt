@@ -1,0 +1,198 @@
+import sys
+# ---------------------------------------------------------------------
+# úkol 1
+"""
+Algoritmus bude fungovat následovně, bude si v okénku udržovat všechny zatím nesetříděné prvky ve vzdálenosti max k od od index i.
+Takových prvků je max 2*k + 1. Pro každý index i v původním poli se z takového okénka vybere minimum a takové minimum připadne na i-tou pozici v novém setříděném poli.
+Takto pro každý index v původním poli. Časová složitost je tedy (2*k + + 1)*n = 2*k*n + n = O(k*n).
+Odhad počtu prvků 2*k + 1 je poměrně štedrý a jedná se o horní hranici. Ve skutečnosti si stačí pamatovat pouze k prvků.
+Na index 0 máme okénko velikost k + 1, jeden z těchto prvků zatřidíme do nového pole. Na index 1 bychom tedy vzali 1(prvky nalevo od pozice) + (k + 1)(prvky napravo od pozice) prvků, avšak jeden těchto prvků je již setříděn.
+Tedy velikost okénka je k+1. Takto indukcí až do konce pole, vždy přidáme jeden prvek zprava, ale zároveň jeden prvek je již setříděn.
+Setřidění lze udělat inplace vhodným udržovaním okénka(viz implementace) s pamětovou náročností O(1).
+
+"""
+def min_index(array, l, r):
+    min_index = l
+    for i in range(l+1,r):
+        if(array[i] < array[min_index]):
+            min_index = i
+    return min_index
+
+def almost_sort(k, array):
+    window_l, window_r = 0, k+1
+    while(window_l < window_r):
+        i = min_index(array, window_l, window_r)
+        array[i], array[window_l] = array[window_l], array[i]
+        window_l += 1
+        window_r = min(window_r+1, len(array))
+
+    return array
+
+print(almost_sort(3, [3,4,1,2,5]) == [1,2,3,4,5])
+# ---------------------------------------------------------------------
+# úkol 2
+"""
+Pokud bychom předpokládali, že klíče jsou celočíselné mohli bychom použít následující metodu.
+Označme si d = maximum(počet prvků se stejným klíčem)
+Nyní přenásobníme každý klíč d a pro každou posloupnost prvků se stejným klíčem přičteme 0 k prvnímu, 1 k druhému atd....
+Prvky přenásobníme d, abychom měli prostor pro přičítání k posloupnosti se stejným klíčem.
+Pokud máme dva klíče, které se liší alespoň o 1 po přenásobení mezi nimi bude rozdíl alespoň d.
+K prvkům se stejným klíčem přičteme relativní pozici vůči ostatním prvkům, aby třidení zůstalo stabilní.
+Zde dostáváme konstantní časovou složitost
+
+Druhá možnost je přetvořit klíč a porovnávací funkci řadícího algoritmu.
+Funkce klíč by vracela tuple (původní klíč, původní pořadí prvku).
+Porovnávaní stačí zadefinovat kdy a < b.
+a < b pokud a(původ. klíč) < b(původ klíč) or ( a(původ. klíč) == b(původ. klíč) and a(pozice) < b(pozice))
+jinak b > a. a == b nastat nemůže, pozice bude vždy jiná.
+Zde je pamětová složitost O(n)
+"""
+# ---------------------------------------------------------------------
+# úkol 3
+"""
+Mějme linked list
+l = o-o-o-o-o-o-o-o-o délky n
+Nyní jako v klasickém merge sortu nejprve střídíme bloky délky 1, poté bloky délky 2 až bloky délky až bloky délky  2^hc(log2(n)), kde hc je horní celá část.
+Jak setřídíme bloky délky x, když bloky délky x/2 jsou setříděné ?
+Vytvoříme si nový linked list ve do kterého budeme přídávat setříděné bloky délky x. Na začáku bude samozřejmě prázdý.
+Tedy nyní máme linked list SORT, který je prázdný a link link NOTSORT, kde bloky délky x/2 jsou setříděné.
+Určitě jsme schopni odebrat 2 první blok délky x/2 z NOTSORT a setřídit je a vytvořit linked list TEMP délky x, který je seřazený.
+Toto jsme schopni provést v čase O(x(odebrání)+x(třidení)) a s konstantní pamětovou složitostí.
+Nyní TEMP připojíme ke konci SORT.
+Podobně po každý každý další blok délky x.
+Na konci tak máme linked list SORT ve kterém jsou bloky délky x seřazené.
+Jeden takový cyklus bude tedy trvat (O(x)+O(x))*n/x = O(n) a pamětová složitost bude konstantní.
+Počet cyklů bude hc(log(n)). Tedy časová složitost O(n*log(n)) a pamětová složitost bude konstantní.
+"""
+
+# Kód ze cvičení
+class DoubleNode:
+    def __init__(self, value, prev = None, next = None):
+        self.value = value
+        self.prev = prev
+        self.next = next
+
+class DoublyLinkedList:
+    def __init__(self):
+        self.head = None
+        self.tail = None
+        
+    def link(self, prev, next, node):
+        node.prev = prev
+        node.next = next
+
+        if prev != None:
+            prev.next = node
+        else:
+            self.head = node
+
+        if next != None:
+            next.prev = node
+        else:
+            self.tail = node
+
+    def linkAfter(self, prev, node):
+        self.link(prev, self.head if prev == None else prev.next, node)
+
+    def linkBefore(self, next, node):
+        self.link(self.tail if next == None else next.prev, next, node)
+
+    def unlink(self, node):
+        prev = node.prev
+        next = node.next
+
+        node.prev = None
+        node.next = None
+
+        if prev != None:
+            prev.next = next
+        else:
+            self.head = next
+
+        if next != None:
+            next.prev = prev
+        else:
+            self.tail = prev
+
+    def unlinkHead(self):
+        node = self.head
+        if node != None:
+            self.unlink(node)
+        return node
+
+    def unlinkTail(self):
+        node = self.tail
+        if node != None:
+            self.unlink(node)
+        return node
+
+    def linkHead(self, node):
+        self.linkAfter(None, node)
+
+    def linkTail(self, node):
+        self.linkBefore(None, node)
+
+    def empty(self):
+        return self.head == None
+
+    def fromArray(self, array):
+        for a in array:
+            self.linkTail(DoubleNode(a))
+
+    def toArray(self):
+        result = []
+        cur = self.head
+        while cur != None:
+            result.append(cur.value)
+            cur = cur.next
+        return result
+
+#Implemnetace mergeSort
+
+def removeFromLL(ll, length):
+    new_ll = DoublyLinkedList()
+    for i in range(length):
+        head = ll.unlinkHead()
+        if(not head):
+            break
+        new_ll.linkTail(head)
+    return new_ll
+
+
+def mergeLL(TMP, ll1, ll2):
+    while(not ll1.empty() and not ll2.empty()):
+        if(ll1.head.value < ll2.head.value):
+            TMP.linkTail(ll1.unlinkHead())
+        else:
+            TMP.linkTail(ll2.unlinkHead())
+    while(not ll1.empty()):
+        TMP.linkTail(ll1.unlinkHead())
+
+    while(not ll2.empty()):
+        TMP.linkTail(ll2.unlinkHead())
+
+def mergeSort(UNSORT, length):
+    print(1)
+    block_size = 1
+    while block_size < length:
+        SORT = DoublyLinkedList()
+        for blocks in range(0, length, 2*block_size):
+            ll1 = removeFromLL(UNSORT, block_size)
+            ll2 = removeFromLL(UNSORT, block_size)
+            mergeLL(SORT, ll1, ll2)
+
+        UNSORT = SORT
+        block_size *= 2
+    return UNSORT
+
+
+ll1 = DoublyLinkedList()
+ll1.linkTail(DoubleNode(6))
+ll1.linkTail(DoubleNode(5))
+ll1.linkTail(DoubleNode(4))
+ll1.linkTail(DoubleNode(3))
+ll1.linkTail(DoubleNode(2))
+ll1.linkTail(DoubleNode(1))
+print(mergeSort(ll1, 6).toArray())
+
+

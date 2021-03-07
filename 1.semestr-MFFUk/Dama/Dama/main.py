@@ -872,5 +872,5 @@ def startGame():
 
         turn += 1
 
-
+fdaf
 startGame()

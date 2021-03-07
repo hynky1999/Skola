@@ -1,0 +1,165 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[czech]{babel}
+\usepackage{amsmath, amssymb}
+
+
+% figure support
+\usepackage{import}
+\usepackage{xifthen}
+\pdfminorversion=7
+\usepackage{pdfpages}
+\usepackage{transparent}
+\newcommand{\incfig}[1]{%
+    \def\svgwidth{\columnwidth}
+    \import{./figures/}{#1.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+\title{LIN úkol 8}
+\author{Hynek Kydlíček}
+\begin{document}
+\maketitle
+\section{Dcv. 1}
+Postupujme sporem, předpokládejme, že existují alespoň 2 řešení soustavy a zárověň jsou sloupce LN.
+Existují 2 řešení($r_1$, $r_2$) říká, že existují 2 různé lin. kombiace sloupců dávají vektor $b$.
+Tedy
+\[
+    \sum_{i=1}^{n} r_2_i * s_i = b
+.\] 
+a
+\[
+    \sum_{i=1}^{n} r_1_i * s_i = b
+.\] 
+A tedy
+\begin{align*}
+    \sum_{i=1}^{n} r_2_i * s_i  = \sum_{i=1}^{n} r_1_i * s_i\\
+    \sum_{i=1}^{n} (r_2_i-r_1_i) * s_i  = 0
+\end{align}
+Avšak $r_2 \neq r_1 \implies (\exists i \in n)\ r_1_i \neq  r_2_i$.
+To je ale spor s LN sloupců, protože jsme právě našli netriviální lin. kombinaci dávající nulový vektor.
+
+
+\section{Dcv. 2}
+\subsection{Implikace zleva doprava}
+$v_1\ldots v_n \in V$ LN $\implies v_1,v_1+v_2,\sum_{i\in [n]} v_i$ jsou LN.\\
+Ukážeme, že linearní kombinace vektorů $v_1,v_1+v_2,\sum_{i\in [n]} v_i$ rovnající se $0$ musí být triviální.
+\\
+
+\[
+    \sum_{i=1}^{n}(\sum_{k=1}^{i}v_i * \alpha_i) = 0\ \text{lze přepsat jako} \sum_{i=1}^{n}(v_i*\sum_{k=i}^{n} \alpha_k) = 0
+.\] 
+Z předpokladu:
+\[
+    v_1\ldots v_n\ \text{jsou LN} \implies \sum_{i=1}^{n} \beta_i*v_i = 0\  \text{pouze pro}\  \beta_i = 0
+.\]
+Tedy pouze pokud $\sum_{k=i}^{n} \alpha_k = \beta_i = 0$ pro každe $i \in n$ pak je lin. kombinace $= 0$. Pokud bychom si takovoto soustavu zapsali do matice 
+\[
+    A^{n,n}=
+\left(
+\begin{array}{c c c c | c}
+    1 & 1 & \ldots & 1 & 0\\
+    0 & 1 & \ldots & 1 & 0\\
+    \vdots & \vdots & \ddots & \vdots & 0\\
+    0 & 0 & 0 & 1 & 0
+\end{array} 
+\right)
+.\]
+
+Vidíme, že matice j́e v REF a má právě jedno řešení(Máme n pivotů a n řadků neboli matice je regularní) $(\forall i \in n)  \alpha_i = 0$. A tedy pouze triviální kombinace vektorů je rovna nule. A tedy vektory musí být LN.
+
+\subsection{implikace zprava doleva}
+Dokážeme obrácenou implikaci.
+$v_1\ldots v_n \in V$ jsou LZ $\implies v_1,v_1+v_2,\sum_{i\in [n]} v_i$ jsou LZ.\\
+Ukážeme, že existuje netriviální linearní kombinace vektorů $v_1,v_2\ldots v_n$ rovnající se $0$.
+\[
+    \sum_{i=1}^{n}(\sum_{k=1}^{i}v_i * \alpha_i) = 0\ \text{lze přepsat jako} \sum_{i=1}^{n}(v_i*\sum_{k=i}^{n} \alpha_k) = 0
+.\] 
+Z předpokladu platí, že:
+\[
+    v_1\ldots v_n\ \text{jsou LZ} \implies \sum_{i=1}^{n} \beta_i*v_i = 0\  \text{existuje alespoň jedno i,}\  \beta_i \neq 0
+.\]
+Tedy pokud $\sum_{k=i}^{n} \alpha_k = \beta_i$, pro každe $i\in n$ pak lin. kombinace $=0$. Zapíšeme soustavu jako matici
+\[
+    A^{n,n}=
+\left(
+\begin{array}{c c c c | c}
+    1 & 1 & \ldots & 1 & \beta_1\\
+    0 & 1 & \ldots & 1 & \beta_2\\
+    \vdots & \vdots & \ddots & \vdots & \beta_3\\
+    0 & 0 & 0 & 1 & \beta_n
+\end{array} 
+\right) \text{, kde alespň jedno}\  \beta_i \neq 0
+.\] 
+Vidíme, že matice j́e v REF a má právě jedno řešení(znovu máme regularní matici),takové řešení určite nebude $(\forall i \in n)  \alpha_i = 0$. To by znamenalo, že $(\forall i \in n) \beta_i = 0$. Což není pravda. Tedy alespoň jedno $\alpha_i \neq  0$. A tedy existuje netriviální kombinace vektorů rovna nule. A tedy vektory musí být LZ.
+\section{Dcv. 1}
+Úloha můžeme formulovat také tak, kdy má rovnice
+\begin{equation*}
+\alpha_1 * \begin{pmatrix} 1\\ a\\ 1 \end{pmatrix}\
++ 
+\alpha_2 * \begin{pmatrix} 1\\ 1\\ 1 \end{pmatrix}\
+*
+\alpha_3 * \begin{pmatrix} 2\\ 2\\ a \end{pmatrix}\
+= 0
+\end{equation}
+právě jedno řešení(triviální).
+Soustavu si přepíšeme do matice.
+\begin{equation*}
+    \left(
+    \begin{array}{c c c | c}
+        1 & 1 & 2 & 0\\
+        a & 1 & 2 & 0\\
+        1 & 1 & a & 0
+    \end{array}
+    \right)
+    \sim
+    \left(
+    \begin{array}{c c c | c}
+        1 & 1 & 2 & 0\\
+        0 & 1-a & 2-2*a & 0\\
+        0 & 0 & a-2 & 0
+    \end{array}
+    \right)
+\end{equation}
+Pro a=2 dostáváme matici
+\begin{equation}
+\left(
+\begin{array}{c c c | c}
+    1 & 1 & 2 & 0\\
+    0 & -3 & -2 & 0\\
+    0 & 0 & 0 & 0
+\end{array}
+\right)
+\end{equation}
+Matice má určitě více než jedno řešení(má jeden sloupec nebazický).
+\\
+Pro a=1
+\begin{equation}
+\left(
+\begin{array}{c c c | c}
+    1 & 1 & 2 & 0\\
+    0 & 0 & 0 & 0\\
+    0 & 0 & -1 & 0
+\end{array}
+\right)
+\sim
+\begin{equation}
+\left(
+\begin{array}{c c c | c}
+    1 & 1 & 2 & 0\\
+    0 & 0 & -1 & 0\\
+    0 & 0 & 0 & 0
+\end{array}
+\right)
+\end{equation}
+Matice má určitě více než jedno řešení(má jeden sloupec nebazický).
+\\
+Pro $a \in R \setminus \{1,2\}$, dostávé řešení: \begin{pmatrix} 0\\ 0\\ 0 \end{pmatrix}
+Tedy vektory jsou LN pro $a \in R \setminus \{1,2\}$
+
+
+
+\end{document}

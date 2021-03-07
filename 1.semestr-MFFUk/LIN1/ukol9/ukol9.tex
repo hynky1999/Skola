@@ -1,0 +1,146 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[czech]{babel}
+\usepackage{amsmath, amssymb}
+
+
+% figure support
+\usepackage{import}
+\usepackage{xifthen}
+\pdfminorversion=7
+\usepackage{pdfpages}
+\usepackage{transparent}
+\newcommand{\incfig}[1]{%
+    \def\svgwidth{\columnwidth}
+    \import{./figures/}{#1.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+\title{Lin 9}
+\author{Hynek Kydlicek}
+\begin{document}
+\maketitle
+\begin{section}{Dcv. 1}
+    Zjistíme, zda lze vektor
+    $\begin{pmatrix} 4 \\ 4 \\ 2 \end{pmatrix}$ zapsat jako linearní kombinaci vektorů z báze B.
+\begin{align*}
+    \begin{pmatrix}
+        3 & 6 & \bigm| & 4\\
+        2 & 1 & \bigm| & 4\\
+        4 & 5 & \bigm| & 2
+    \end{pmatrix} 
+    \sim
+    \begin{pmatrix}
+        3 & 6 & \bigm| & 4\\
+        0 & 4 & \bigm| & 6\\
+        0 & 4 & \bigm| & 6
+    \end{pmatrix} 
+    \sim
+    \begin{pmatrix}
+        3 & 6 & \bigm| & 4\\
+        0 & 4 & \bigm| & 6\\
+        0 & 0 & \bigm| & 0
+    \end{pmatrix} 
+    \sim
+    \begin{pmatrix}
+        3 & 0 & \bigm| & 2\\
+        0 & 4 & \bigm| & 6\\
+        0 & 0 & \bigm| & 0
+    \end{pmatrix} 
+.\end{align*}
+Z matice vidíme, že rovnice má právě jedno řešení $\begin{pmatrix}3 \\ 5 \end{pmatrix}$.
+Toto řešení jsou zároveň souřadnice vektoru v bázi $B$, což můžeme ověřit:
+\[
+    \begin{pmatrix}
+        3 & 6\\
+        2 & 1\\
+        4 & 5
+    \end{pmatrix}
+    \times
+    \begin{pmatrix} 3 \\ 5 \end{pmatrix}
+    =
+    \begin{pmatrix}
+        4 \\
+        4 \\
+        2
+    \end{pmatrix} 
+.\] 
+\end{section}
+\begin{section}{Dcv. 2}
+    Úlohu můžeme převést na nalezení dimenze prostoru vektorů $T^{4}$, kde jednotlivé složky vektoru(a,b,c,d) jsou koeficienty polynomu a zároveň platí, že $a+b+c+d = 0$.
+    Stačí tedy zjisti pro jaké $a,b,c,d \in T$ rovnost platí.
+    Tedy stačí zjisti, kolik má rovnice $a+b+c+d = 0$ řešení. Tedy jaká je dimenze Ker(A), \[
+        A = \begin{pmatrix} 1 &  1 & 1 & 0 \end{pmatrix} 
+    .\] 
+    Z Frobienovy věty dostáváme, že dimenze jádra je $n-k$, kde $k$ je počet bazických sloupců.
+    Tedy dimenze je 3.
+    Nejsem si jist, zda je Frobienova věta již dokázána, proto naleznu bázi o velikost 3.
+    Z matice $(A|0)$ dostáváme řešení: \[
+        \begin{pmatrix} -x - y \\ x \\ y \\ z \end{pmatrix}, x \in T, y \in T, z \in T
+    .\]
+    lze zapsat jako
+    \[
+        x \times \begin{pmatrix} -1 \\ 1 \\ 0 \\ 0 \end{pmatrix}
+        + y \times \begin{pmatrix} -1 \\ 0 \\ 1 \\ 0 \end{pmatrix} 
+        + z \times \begin{pmatrix} 0 \\ 0 \\ 0 \\ 1 \end{pmatrix} 
+    .\] 
+    Tedy vidíme, že jádro matice lze zapsat jako množinu všech linéarní kombinací vektorů
+        $\begin{pmatrix} -1 \\ 1 \\ 0 \\ 0 \end{pmatrix},
+        \begin{pmatrix} -1 \\ 0 \\ 1 \\ 0 \end{pmatrix},
+        \begin{pmatrix} 0 \\ 0 \\ 0 \\ 1 \end{pmatrix},$
+        \\
+        Tyto vektoru tedy generují prostor ker(A), že jde o LN vektory můžeme nahlédnout z definice, popřípadě okometricky :).
+\end{section}
+\begin{section}{Dcv. 3}
+\begin{subsection}{a) podprostor}
+    Ověříme 3 podmínky býti podprostorem, neboť S je zajisté podmnožina M.
+    \begin{enumerate}
+        \item $\theta \in S$\\
+            Triviálně z definice je i matice $\begin{pmatrix} 0 & 0 \\ 0 & 0 \end{pmatrix}$ symetrická,
+            tedy je opravdu $S$ obsahuje $\theta$.
+        \item $x,y \in S \implies x+y \in S$\\
+            Tedy máme ukázat, že součet symetrických matic $2\times2$ je sym. matice.\\
+            \[
+                (x+y)_i_j = x_i_j+y_i_j =(\text{sym. matice}) x_j_i + y_j_i = (x + y)_j_i
+            .\] 
+        \item $x \in S, \alpha \in T \implies \alpha y \in S$\\
+            Tedy máme ukázat, že násobení skalárem zachováva vlastnot být symetrická matice.\\
+            \[
+                (\alpha x)_i_j = \alpha x_i_j =(\text{sym. matice}) \alpha x_j_i = (\alpha x)_j_i
+            .\] 
+    \end{enumerate}
+    Tedy se skutečně o podprostor jedná.
+\end{subsection}
+\begin{subsection}{b) Báze}
+    Podobně jako v příkladu 2, najdeme všechny matice, které splnǔjí podmínku být symetrické.
+    Tedy hledáme matice tvaru $\begin{pmatrix} a & b \\ c & d \end{pmatrix}, a,b,c,d \in T \wedge b =c, \text{lze zapsat jako}\\ b-c = 0$.
+    Znovu hledáme jádro matice $A$, kde $A =$
+    \[
+        \begin{pmatrix} 0 & 1 & -1 & 0 \end{pmatrix}
+    .\] 
+    Řešení matice $(A|0)$ je:
+    \[
+        \begin{pmatrix} x \\ y \\ y \\ z  \end{pmatrix} x,y,z \in T
+    .\] 
+    Tedy jádro matice lze napsat ve tvaru \[
+        x \times \begin{pmatrix} 1 \\ 0 \\ 0 \\ 0 \end{pmatrix}
+        + y \times \begin{pmatrix} 0 \\ 1 \\ 1 \\ 0 \end{pmatrix} 
+        + z \times \begin{pmatrix} 0 \\ 0 \\ 0 \\ 1 \end{pmatrix} 
+    .\] 
+    Vektory jsou zajisté LN(první vektor má jako jediný nenulový první index, poslední má jako nenulový poslední index, prostřední zbytek) a generují ker(A).
+    Nyní stačí vektory bází ker(A) přepsat zpět do hledaného maticového tvaru.
+    Tedy báze prostoru symetrických matic jsou matice
+    \[
+        \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix},
+        \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix},
+        \begin{pmatrix} 0 & 0 \\ 0 & 1 \end{pmatrix},
+    \]
+\end{subsection}
+\begin{subsection}{c) dimzenze}
+    Jelikož jsme našli bázi o 3 vektorech, tedy je dimenze 3.
+\end{subsection}
+\end{section}
+\end{document}

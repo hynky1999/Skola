@@ -1,0 +1,9 @@
+Úloha 4
+>>> from numpy import uint8, uint16
+>>> x = uint8(0b00100_010)
+>>> y = uint8(0b00111_000)
+>>> z = uint16(x)
+>>> z = z* y
+>>> z = uint8(z >> 3)
+>>> print(z / (1 << 3))
+29.75
